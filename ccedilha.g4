@@ -2,15 +2,22 @@
 grammar ccedilha;
 import ccedilhaTokens;
 
-prog: stat+;
+prog: main;
+
+main: 'nada principal()' LPAREN (stat+ | func+) RPAREN; 
  
 stat: expr ' igual ' expr ENDLINE
     ; 
 
-expr: expr (' vezes '|' divide ') expr
-    | expr (' mais '|' menos ') expr
+func: 'amostrar' LPAREN STRING RPAREN ENDLINE
+    | INT PLUS_PLUS ENDLINE
+    | INT MINUS_MINUS ENDLINE
+    ;
+
+expr: expr ( MULT | DIV ) expr
+    | expr ( PLUS | MINUS) expr    
     | INT
-    | '(' expr ')'
+    | LPAREN expr RPAREN
     ;
 
 WS : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines

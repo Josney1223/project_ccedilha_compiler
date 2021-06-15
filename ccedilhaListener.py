@@ -17,6 +17,15 @@ class ccedilhaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ccedilhaParser#main.
+    def enterMain(self, ctx:ccedilhaParser.MainContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#main.
+    def exitMain(self, ctx:ccedilhaParser.MainContext):
+        pass
+
+
     # Enter a parse tree produced by ccedilhaParser#stat.
     def enterStat(self, ctx:ccedilhaParser.StatContext):
         pass

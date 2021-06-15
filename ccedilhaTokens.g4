@@ -9,6 +9,30 @@ FLOAT: [0-9]+'.'[0-9]+; // Float
 //CHAR: [];
 BOOL: 'verdadeiro'|'falso';
 ID: [a-zA-Z]+; // Id das variaveis
+LKEY: '{';
+RKEY: '}';
+LPAREN: '(';
+RPAREN: ')';
 //NEWLINE:'\r'? '\n';
+
+//Operadores Relacionais e Logicos
+IF: 'se';
+ELSE: 'senao';
+WHILE: 'enquanto';
+AND: ' e ';
+OR: ' ou ';
+GREATER_EQUAL: ' maiorIgual ';
+LESSER_EQUAL: ' menorIgual ';
+GREATER: ' maior ';
+LESSER: ' menor ';
+
+//Operadores Matematicos
+PLUS: ' mais ';
+MINUS: ' menos ';
+MULT: ' vezes ';
+DIV: ' divide ';
+REST: ' resto ';
+PLUS_PLUS: ' maisMais';
+MINUS_MINUS: ' maisMais';
 
 WS : [ \t\r\n]+ -> skip ;
