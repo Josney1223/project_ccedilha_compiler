@@ -4,10 +4,13 @@ import ccedilhaTokens;
 
 prog: main;
 
-main: 'nada principal()' LPAREN (stat+ | func+) RPAREN; 
+main: 'nada principal()' LKEY (stat | func | att)+ RKEY; 
  
-stat: expr ' igual ' expr ENDLINE
+stat: expr EQUAL expr ENDLINE
     ; 
+
+att: ID EQUAL expr ENDLINE
+    ;
 
 func: 'amostrar' LPAREN STRING RPAREN ENDLINE
     | INT PLUS_PLUS ENDLINE

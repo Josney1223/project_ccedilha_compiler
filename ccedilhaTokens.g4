@@ -16,6 +16,7 @@ RPAREN: ')';
 //NEWLINE:'\r'? '\n';
 
 //Operadores Relacionais e Logicos
+EQUAL: ' igual ';
 IF: 'se';
 ELSE: 'senao';
 WHILE: 'enquanto';
@@ -33,6 +34,6 @@ MULT: ' vezes ';
 DIV: ' divide ';
 REST: ' resto ';
 PLUS_PLUS: ' maisMais';
-MINUS_MINUS: ' maisMais';
+MINUS_MINUS: ' menosMenos';
 
 WS : [ \t\r\n]+ -> skip ;
