@@ -21,11 +21,10 @@ public class ccedilhaParser extends Parser {
 		AND=18, OR=19, GREATER_EQUAL=20, LESSER_EQUAL=21, GREATER=22, LESSER=23, 
 		PLUS=24, MINUS=25, MULT=26, DIV=27, REST=28, PLUS_PLUS=29, MINUS_MINUS=30;
 	public static final int
-		RULE_prog = 0, RULE_main = 1, RULE_stat = 2, RULE_att = 3, RULE_func = 4, 
-		RULE_expr = 5;
+		RULE_prog = 0, RULE_main = 1, RULE_att = 2, RULE_func = 3, RULE_expr = 4;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"prog", "main", "stat", "att", "func", "expr"
+			"prog", "main", "att", "func", "expr"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -115,7 +114,7 @@ public class ccedilhaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(12);
+			setState(10);
 			main();
 			}
 		}
@@ -133,12 +132,6 @@ public class ccedilhaParser extends Parser {
 	public static class MainContext extends ParserRuleContext {
 		public TerminalNode LKEY() { return getToken(ccedilhaParser.LKEY, 0); }
 		public TerminalNode RKEY() { return getToken(ccedilhaParser.RKEY, 0); }
-		public List<StatContext> stat() {
-			return getRuleContexts(StatContext.class);
-		}
-		public StatContext stat(int i) {
-			return getRuleContext(StatContext.class,i);
-		}
 		public List<FuncContext> func() {
 			return getRuleContexts(FuncContext.class);
 		}
@@ -164,86 +157,38 @@ public class ccedilhaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(14);
+			setState(12);
 			match(T__0);
-			setState(15);
+			setState(13);
 			match(LKEY);
-			setState(19); 
+			setState(16); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
-				setState(19);
+				setState(16);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,0,_ctx) ) {
 				case 1:
 					{
-					setState(16);
-					stat();
+					setState(14);
+					func();
 					}
 					break;
 				case 2:
 					{
-					setState(17);
-					func();
-					}
-					break;
-				case 3:
-					{
-					setState(18);
+					setState(15);
 					att();
 					}
 					break;
 				}
 				}
-				setState(21); 
+				setState(18); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << INT) | (1L << ID) | (1L << LPAREN))) != 0) );
-			setState(23);
+			} while ( _la==T__1 || _la==ID );
+			setState(20);
 			match(RKEY);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class StatContext extends ParserRuleContext {
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
-		public TerminalNode EQUAL() { return getToken(ccedilhaParser.EQUAL, 0); }
-		public TerminalNode ENDLINE() { return getToken(ccedilhaParser.ENDLINE, 0); }
-		public StatContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_stat; }
-	}
-
-	public final StatContext stat() throws RecognitionException {
-		StatContext _localctx = new StatContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_stat);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(25);
-			expr(0);
-			setState(26);
-			match(EQUAL);
-			setState(27);
-			expr(0);
-			setState(28);
-			match(ENDLINE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -272,17 +217,17 @@ public class ccedilhaParser extends Parser {
 
 	public final AttContext att() throws RecognitionException {
 		AttContext _localctx = new AttContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_att);
+		enterRule(_localctx, 4, RULE_att);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(30);
+			setState(22);
 			match(ID);
-			setState(31);
+			setState(23);
 			match(EQUAL);
-			setState(32);
+			setState(24);
 			expr(0);
-			setState(33);
+			setState(25);
 			match(ENDLINE);
 			}
 		}
@@ -298,60 +243,91 @@ public class ccedilhaParser extends Parser {
 	}
 
 	public static class FuncContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(ccedilhaParser.LPAREN, 0); }
-		public TerminalNode STRING() { return getToken(ccedilhaParser.STRING, 0); }
-		public TerminalNode RPAREN() { return getToken(ccedilhaParser.RPAREN, 0); }
-		public TerminalNode ENDLINE() { return getToken(ccedilhaParser.ENDLINE, 0); }
-		public TerminalNode INT() { return getToken(ccedilhaParser.INT, 0); }
-		public TerminalNode PLUS_PLUS() { return getToken(ccedilhaParser.PLUS_PLUS, 0); }
-		public TerminalNode MINUS_MINUS() { return getToken(ccedilhaParser.MINUS_MINUS, 0); }
 		public FuncContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_func; }
+	 
+		public FuncContext() { }
+		public void copyFrom(FuncContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	public static class FuncMinusMinusContext extends FuncContext {
+		public TerminalNode ID() { return getToken(ccedilhaParser.ID, 0); }
+		public TerminalNode MINUS_MINUS() { return getToken(ccedilhaParser.MINUS_MINUS, 0); }
+		public TerminalNode ENDLINE() { return getToken(ccedilhaParser.ENDLINE, 0); }
+		public FuncMinusMinusContext(FuncContext ctx) { copyFrom(ctx); }
+	}
+	public static class FuncPlusPlusContext extends FuncContext {
+		public TerminalNode ID() { return getToken(ccedilhaParser.ID, 0); }
+		public TerminalNode PLUS_PLUS() { return getToken(ccedilhaParser.PLUS_PLUS, 0); }
+		public TerminalNode ENDLINE() { return getToken(ccedilhaParser.ENDLINE, 0); }
+		public FuncPlusPlusContext(FuncContext ctx) { copyFrom(ctx); }
+	}
+	public static class FuncPrintContext extends FuncContext {
+		public TerminalNode LPAREN() { return getToken(ccedilhaParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(ccedilhaParser.RPAREN, 0); }
+		public TerminalNode ENDLINE() { return getToken(ccedilhaParser.ENDLINE, 0); }
+		public TerminalNode STRING() { return getToken(ccedilhaParser.STRING, 0); }
+		public TerminalNode INT() { return getToken(ccedilhaParser.INT, 0); }
+		public TerminalNode ID() { return getToken(ccedilhaParser.ID, 0); }
+		public FuncPrintContext(FuncContext ctx) { copyFrom(ctx); }
 	}
 
 	public final FuncContext func() throws RecognitionException {
 		FuncContext _localctx = new FuncContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_func);
+		enterRule(_localctx, 6, RULE_func);
+		int _la;
 		try {
-			setState(46);
+			setState(38);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
+				_localctx = new FuncPrintContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(35);
+				setState(27);
 				match(T__1);
-				setState(36);
+				setState(28);
 				match(LPAREN);
-				setState(37);
-				match(STRING);
-				setState(38);
+				setState(29);
+				_la = _input.LA(1);
+				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << INT) | (1L << STRING) | (1L << ID))) != 0)) ) {
+				_errHandler.recoverInline(this);
+				}
+				else {
+					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+					_errHandler.reportMatch(this);
+					consume();
+				}
+				setState(30);
 				match(RPAREN);
-				setState(39);
+				setState(31);
 				match(ENDLINE);
 				}
 				break;
 			case 2:
+				_localctx = new FuncPlusPlusContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(40);
-				match(INT);
-				setState(41);
+				setState(32);
+				match(ID);
+				setState(33);
 				match(PLUS_PLUS);
-				setState(42);
+				setState(34);
 				match(ENDLINE);
 				}
 				break;
 			case 3:
+				_localctx = new FuncMinusMinusContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(43);
-				match(INT);
-				setState(44);
+				setState(35);
+				match(ID);
+				setState(36);
 				match(MINUS_MINUS);
-				setState(45);
+				setState(37);
 				match(ENDLINE);
 				}
 				break;
@@ -369,23 +345,53 @@ public class ccedilhaParser extends Parser {
 	}
 
 	public static class ExprContext extends ParserRuleContext {
-		public TerminalNode INT() { return getToken(ccedilhaParser.INT, 0); }
-		public TerminalNode LPAREN() { return getToken(ccedilhaParser.LPAREN, 0); }
+		public ExprContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_expr; }
+	 
+		public ExprContext() { }
+		public void copyFrom(ExprContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	public static class ExprMultDivContext extends ExprContext {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
-		public TerminalNode RPAREN() { return getToken(ccedilhaParser.RPAREN, 0); }
 		public TerminalNode MULT() { return getToken(ccedilhaParser.MULT, 0); }
 		public TerminalNode DIV() { return getToken(ccedilhaParser.DIV, 0); }
+		public ExprMultDivContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	public static class ExprParenContext extends ExprContext {
+		public TerminalNode LPAREN() { return getToken(ccedilhaParser.LPAREN, 0); }
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
+		public TerminalNode RPAREN() { return getToken(ccedilhaParser.RPAREN, 0); }
+		public ExprParenContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	public static class ExprPlusMinusContext extends ExprContext {
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
 		public TerminalNode PLUS() { return getToken(ccedilhaParser.PLUS, 0); }
 		public TerminalNode MINUS() { return getToken(ccedilhaParser.MINUS, 0); }
-		public ExprContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_expr; }
+		public ExprPlusMinusContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	public static class NumberContext extends ExprContext {
+		public TerminalNode INT() { return getToken(ccedilhaParser.INT, 0); }
+		public NumberContext(ExprContext ctx) { copyFrom(ctx); }
+	}
+	public static class IdContext extends ExprContext {
+		public TerminalNode ID() { return getToken(ccedilhaParser.ID, 0); }
+		public IdContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -397,29 +403,45 @@ public class ccedilhaParser extends Parser {
 		int _parentState = getState();
 		ExprContext _localctx = new ExprContext(_ctx, _parentState);
 		ExprContext _prevctx = _localctx;
-		int _startState = 10;
-		enterRecursionRule(_localctx, 10, RULE_expr, _p);
+		int _startState = 8;
+		enterRecursionRule(_localctx, 8, RULE_expr, _p);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(54);
+			setState(47);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case INT:
 				{
-				setState(49);
+				_localctx = new NumberContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+
+				setState(41);
 				match(INT);
+				}
+				break;
+			case ID:
+				{
+				_localctx = new IdContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(42);
+				match(ID);
 				}
 				break;
 			case LPAREN:
 				{
-				setState(50);
+				_localctx = new ExprParenContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(43);
 				match(LPAREN);
-				setState(51);
+				setState(44);
 				expr(0);
-				setState(52);
+				setState(45);
 				match(RPAREN);
 				}
 				break;
@@ -427,7 +449,7 @@ public class ccedilhaParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(64);
+			setState(57);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -435,16 +457,16 @@ public class ccedilhaParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(62);
+					setState(55);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
 					case 1:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new ExprMultDivContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(56);
-						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
-						setState(57);
+						setState(49);
+						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
+						setState(50);
 						_la = _input.LA(1);
 						if ( !(_la==MULT || _la==DIV) ) {
 						_errHandler.recoverInline(this);
@@ -454,17 +476,17 @@ public class ccedilhaParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(58);
-						expr(5);
+						setState(51);
+						expr(6);
 						}
 						break;
 					case 2:
 						{
-						_localctx = new ExprContext(_parentctx, _parentState);
+						_localctx = new ExprPlusMinusContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(59);
-						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-						setState(60);
+						setState(52);
+						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+						setState(53);
 						_la = _input.LA(1);
 						if ( !(_la==PLUS || _la==MINUS) ) {
 						_errHandler.recoverInline(this);
@@ -474,14 +496,14 @@ public class ccedilhaParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(61);
-						expr(4);
+						setState(54);
+						expr(5);
 						}
 						break;
 					}
 					} 
 				}
-				setState(66);
+				setState(59);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			}
@@ -500,7 +522,7 @@ public class ccedilhaParser extends Parser {
 
 	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 5:
+		case 4:
 			return expr_sempred((ExprContext)_localctx, predIndex);
 		}
 		return true;
@@ -508,32 +530,31 @@ public class ccedilhaParser extends Parser {
 	private boolean expr_sempred(ExprContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return precpred(_ctx, 4);
+			return precpred(_ctx, 5);
 		case 1:
-			return precpred(_ctx, 3);
+			return precpred(_ctx, 4);
 		}
 		return true;
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3 F\4\2\t\2\4\3\t\3"+
-		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\3\3\3\3\3\3\3\3\3\3\6\3\26\n"+
-		"\3\r\3\16\3\27\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\6\3\6"+
-		"\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6\61\n\6\3\7\3\7\3\7\3\7\3\7\3"+
-		"\7\5\79\n\7\3\7\3\7\3\7\3\7\3\7\3\7\7\7A\n\7\f\7\16\7D\13\7\3\7\2\3\f"+
-		"\b\2\4\6\b\n\f\2\4\3\2\34\35\3\2\32\33\2G\2\16\3\2\2\2\4\20\3\2\2\2\6"+
-		"\33\3\2\2\2\b \3\2\2\2\n\60\3\2\2\2\f8\3\2\2\2\16\17\5\4\3\2\17\3\3\2"+
-		"\2\2\20\21\7\3\2\2\21\25\7\f\2\2\22\26\5\6\4\2\23\26\5\n\6\2\24\26\5\b"+
-		"\5\2\25\22\3\2\2\2\25\23\3\2\2\2\25\24\3\2\2\2\26\27\3\2\2\2\27\25\3\2"+
-		"\2\2\27\30\3\2\2\2\30\31\3\2\2\2\31\32\7\r\2\2\32\5\3\2\2\2\33\34\5\f"+
-		"\7\2\34\35\7\20\2\2\35\36\5\f\7\2\36\37\7\6\2\2\37\7\3\2\2\2 !\7\13\2"+
-		"\2!\"\7\20\2\2\"#\5\f\7\2#$\7\6\2\2$\t\3\2\2\2%&\7\4\2\2&\'\7\16\2\2\'"+
-		"(\7\b\2\2()\7\17\2\2)\61\7\6\2\2*+\7\7\2\2+,\7\37\2\2,\61\7\6\2\2-.\7"+
-		"\7\2\2./\7 \2\2/\61\7\6\2\2\60%\3\2\2\2\60*\3\2\2\2\60-\3\2\2\2\61\13"+
-		"\3\2\2\2\62\63\b\7\1\2\639\7\7\2\2\64\65\7\16\2\2\65\66\5\f\7\2\66\67"+
-		"\7\17\2\2\679\3\2\2\28\62\3\2\2\28\64\3\2\2\29B\3\2\2\2:;\f\6\2\2;<\t"+
-		"\2\2\2<A\5\f\7\7=>\f\5\2\2>?\t\3\2\2?A\5\f\7\6@:\3\2\2\2@=\3\2\2\2AD\3"+
-		"\2\2\2B@\3\2\2\2BC\3\2\2\2C\r\3\2\2\2DB\3\2\2\2\b\25\27\608@B";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3 ?\4\2\t\2\4\3\t\3"+
+		"\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\3\3\3\3\3\3\3\6\3\23\n\3\r\3\16\3\24"+
+		"\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3"+
+		"\5\5\5)\n\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6\62\n\6\3\6\3\6\3\6\3\6\3\6"+
+		"\3\6\7\6:\n\6\f\6\16\6=\13\6\3\6\2\3\n\7\2\4\6\b\n\2\5\4\2\7\b\13\13\3"+
+		"\2\34\35\3\2\32\33\2A\2\f\3\2\2\2\4\16\3\2\2\2\6\30\3\2\2\2\b(\3\2\2\2"+
+		"\n\61\3\2\2\2\f\r\5\4\3\2\r\3\3\2\2\2\16\17\7\3\2\2\17\22\7\f\2\2\20\23"+
+		"\5\b\5\2\21\23\5\6\4\2\22\20\3\2\2\2\22\21\3\2\2\2\23\24\3\2\2\2\24\22"+
+		"\3\2\2\2\24\25\3\2\2\2\25\26\3\2\2\2\26\27\7\r\2\2\27\5\3\2\2\2\30\31"+
+		"\7\13\2\2\31\32\7\20\2\2\32\33\5\n\6\2\33\34\7\6\2\2\34\7\3\2\2\2\35\36"+
+		"\7\4\2\2\36\37\7\16\2\2\37 \t\2\2\2 !\7\17\2\2!)\7\6\2\2\"#\7\13\2\2#"+
+		"$\7\37\2\2$)\7\6\2\2%&\7\13\2\2&\'\7 \2\2\')\7\6\2\2(\35\3\2\2\2(\"\3"+
+		"\2\2\2(%\3\2\2\2)\t\3\2\2\2*+\b\6\1\2+\62\7\7\2\2,\62\7\13\2\2-.\7\16"+
+		"\2\2./\5\n\6\2/\60\7\17\2\2\60\62\3\2\2\2\61*\3\2\2\2\61,\3\2\2\2\61-"+
+		"\3\2\2\2\62;\3\2\2\2\63\64\f\7\2\2\64\65\t\3\2\2\65:\5\n\6\b\66\67\f\6"+
+		"\2\2\678\t\4\2\28:\5\n\6\79\63\3\2\2\29\66\3\2\2\2:=\3\2\2\2;9\3\2\2\2"+
+		";<\3\2\2\2<\13\3\2\2\2=;\3\2\2\2\b\22\24(\619;";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

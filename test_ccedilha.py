@@ -4,6 +4,7 @@ from antlr4 import *
 from ccedilhaLexer import ccedilhaLexer
 from ccedilhaParser import ccedilhaParser
 from ccedilhaListener import ccedilhaListener
+from ccedilhaVisitor import ccedilhaVisitor
 
 
 def main(argv):
@@ -14,9 +15,11 @@ def main(argv):
     tree = parser.prog()
     print(tree.toStringTree(recog=parser))
 
-    listener = ccedilhaListener()
-    walker = ParseTreeWalker()
-    walker.walk(listener, tree)
+    c = ccedilhaVisitor()
+    c.visitChildren(tree)   
+    #listener = ccedilhaListener()
+    # walker = ParseTreeWalker()
+    # walker.walk(listener, tree)
 
 
 if __name__ == '__main__':

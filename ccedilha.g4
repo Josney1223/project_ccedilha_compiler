@@ -4,23 +4,21 @@ import ccedilhaTokens;
 
 prog: main;
 
-main: 'nada principal()' LKEY (stat | func | att)+ RKEY; 
+main: 'nada principal()' LKEY (func | att)+ RKEY; 
  
-stat: expr EQUAL expr ENDLINE
+att: ID EQUAL expr ENDLINE
     ; 
 
-att: ID EQUAL expr ENDLINE
+func: 'amostrar' LPAREN (STRING | INT | ID) RPAREN ENDLINE #funcPrint
+    | ID PLUS_PLUS ENDLINE #funcPlusPlus
+    | ID MINUS_MINUS ENDLINE #funcMinusMinus
     ;
 
-func: 'amostrar' LPAREN STRING RPAREN ENDLINE
-    | INT PLUS_PLUS ENDLINE
-    | INT MINUS_MINUS ENDLINE
-    ;
-
-expr: expr ( MULT | DIV ) expr
-    | expr ( PLUS | MINUS) expr    
-    | INT
-    | LPAREN expr RPAREN
+expr: expr ( MULT | DIV ) expr #exprMultDiv
+    | expr ( PLUS | MINUS ) expr #exprPlusMinus
+    | INT #Number
+    | ID #id
+    | LPAREN expr RPAREN #exprParen
     ;
 
 WS : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
