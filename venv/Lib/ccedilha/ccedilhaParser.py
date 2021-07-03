@@ -1,4 +1,4 @@
-# Generated from ccedilha.g4 by ANTLR 4.9.2
+# Generated from d:\Projetos\project_ccedilha_compiler\venv\Lib\ccedilha\ccedilha.g4 by ANTLR 4.8
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -118,7 +118,7 @@ class ccedilhaParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.9.2")
+        self.checkVersion("4.8")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -126,7 +126,6 @@ class ccedilhaParser ( Parser ):
 
 
     class ProgContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -146,12 +145,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProg" ):
                 listener.exitProg(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProg" ):
-                return visitor.visitProg(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -174,7 +167,6 @@ class ccedilhaParser ( Parser ):
 
 
     class MainContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -223,12 +215,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMain" ):
                 listener.exitMain(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMain" ):
-                return visitor.visitMain(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -287,7 +273,6 @@ class ccedilhaParser ( Parser ):
 
 
     class AttContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -323,12 +308,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAtt" ):
                 listener.exitAtt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAtt" ):
-                return visitor.visitAtt(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -381,7 +360,6 @@ class ccedilhaParser ( Parser ):
 
 
     class DecContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -404,12 +382,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDec" ):
                 listener.exitDec(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDec" ):
-                return visitor.visitDec(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -434,7 +406,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Basic_typeContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -466,12 +437,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitBasic_type" ):
                 listener.exitBasic_type(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBasic_type" ):
-                return visitor.visitBasic_type(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -499,7 +464,6 @@ class ccedilhaParser ( Parser ):
 
 
     class FuncContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -536,12 +500,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitFuncMinusMinus" ):
                 listener.exitFuncMinusMinus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncMinusMinus" ):
-                return visitor.visitFuncMinusMinus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class FuncPlusPlusContext(FuncContext):
 
@@ -563,12 +521,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFuncPlusPlus" ):
                 listener.exitFuncPlusPlus(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncPlusPlus" ):
-                return visitor.visitFuncPlusPlus(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class FuncPrintContext(FuncContext):
@@ -597,12 +549,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFuncPrint" ):
                 listener.exitFuncPrint(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncPrint" ):
-                return visitor.visitFuncPrint(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -668,7 +614,6 @@ class ccedilhaParser ( Parser ):
 
 
     class ExprContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -708,12 +653,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitExprMultDiv" ):
                 listener.exitExprMultDiv(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprMultDiv" ):
-                return visitor.visitExprMultDiv(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class ExprParenContext(ExprContext):
 
@@ -736,12 +675,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExprParen" ):
                 listener.exitExprParen(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprParen" ):
-                return visitor.visitExprParen(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class ExprPlusMinusContext(ExprContext):
@@ -769,12 +702,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitExprPlusMinus" ):
                 listener.exitExprPlusMinus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprPlusMinus" ):
-                return visitor.visitExprPlusMinus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class NumberContext(ExprContext):
 
@@ -793,12 +720,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitNumber" ):
                 listener.exitNumber(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNumber" ):
-                return visitor.visitNumber(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class IdContext(ExprContext):
 
@@ -816,12 +737,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitId" ):
                 listener.exitId(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitId" ):
-                return visitor.visitId(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 

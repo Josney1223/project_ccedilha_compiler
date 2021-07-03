@@ -1,7 +1,7 @@
 nada principal(){
     sentenca aç 
     sentenca aç   
-    a igual "batata"ç
-    a igual "batta"ç  
+    a igual "batta"ç
+    a igual "batata"ç  
     amostrar(a)ç   
 }
