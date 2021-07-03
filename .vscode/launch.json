@@ -4,10 +4,10 @@
         {
             "type": "antlr-debug",
             "request": "launch",
-            "grammar": "ccedilha.g4",
+            "grammar": "${file}",
             "name": "Debug Current Grammar",
             "startRule": "prog",
-            "input": "input.ç",
+            "input": "venv\\Lib\\ccedilha\\input.ç",
             "visualParseTree": true
         },
         {

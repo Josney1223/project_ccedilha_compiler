@@ -1,6 +1,9 @@
 # Generated from ccedilha.g4 by ANTLR 4.9.2
 from antlr4 import *
-from ccedilhaParser import ccedilhaParser
+if __name__ is not None and "." in __name__:
+    from .ccedilhaParser import ccedilhaParser
+else:
+    from ccedilhaParser import ccedilhaParser
 
 # This class defines a complete listener for a parse tree produced by ccedilhaParser.
 class ccedilhaListener(ParseTreeListener):
@@ -38,6 +41,15 @@ class ccedilhaListener(ParseTreeListener):
 
     # Exit a parse tree produced by ccedilhaParser#dec.
     def exitDec(self, ctx:ccedilhaParser.DecContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#basic_type.
+    def enterBasic_type(self, ctx:ccedilhaParser.Basic_typeContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#basic_type.
+    def exitBasic_type(self, ctx:ccedilhaParser.Basic_typeContext):
         pass
 
 

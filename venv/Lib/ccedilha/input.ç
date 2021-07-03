@@ -1,5 +1,7 @@
 nada principal(){
-    inteiro aç    
-    a igual 10ç 
-    amostrar(a)ç
+    sentenca aç 
+    sentenca aç   
+    a igual "batata"ç
+    a igual "batta"ç  
+    amostrar(a)ç   
 }

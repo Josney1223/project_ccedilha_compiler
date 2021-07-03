@@ -32,7 +32,7 @@ MINUS_MINUS: ' menosMenos';
 // tokens
 ENDLINE: [\u00E7];
 INT: SINAL?[0-9]+; // Int
-STRING: '"'~[\\n]+'"'; // String
+STRING: '"'~[\\n"]+'"'; // String
 FLOAT: [0-9]+'.'[0-9]+; // Float
 //CHAR: [];
 BOOL: 'verdadeiro'|'falso';

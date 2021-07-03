@@ -5,10 +5,10 @@ class Att:
         self.type = t
 
     def getValue(self, t: type):
-        if self.type == t:
+        if self.type == t or t == "wildcard":
             return self.value
         else:
-            raise TypeError
+            raise Exception("TypeError: Tipo inválido ao pegar valor da variavel")
 
     def getType(self):
         return self.type

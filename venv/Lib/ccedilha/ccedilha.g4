@@ -9,7 +9,10 @@ main: 'nada principal()' LKEY (func | att | dec ENDLINE)+ RKEY;
 att: (dec | ID) EQUAL (expr | STRING) ENDLINE    
     ; 
 
-dec: (DEINT | DESTRING | DEFLOAT | DEBOOL | DECHAR) ID
+dec: basic_type ID
+    ;
+
+basic_type: (DEINT | DESTRING | DEFLOAT | DEBOOL | DECHAR)
     ;
 
 func: 'amostrar' LPAREN (STRING | INT | ID) RPAREN ENDLINE #funcPrint

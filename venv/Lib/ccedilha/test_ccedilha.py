@@ -15,7 +15,7 @@ def main(argv):
     print(tree.toStringTree(recog=parser))
 
     c = ccedilhaVisitor()
-    c.visitProg(tree)   
+    c.visitProg(tree)
     # listener = ccedilhaListener()
     # walker = ParseTreeWalker()
     # walker.walk(listener, tree)
