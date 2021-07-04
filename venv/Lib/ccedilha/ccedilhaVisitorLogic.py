@@ -8,7 +8,7 @@ else:
 
 # This class defines a complete generic visitor for a parse tree produced by ccedilhaParser.
 
-class ccedilhaVisitor(ParseTreeVisitor):
+class ccedilhaVisitorLogic(ParseTreeVisitor):
     def __init__(self):
         self.Ids = att_dict.AttDict()
 
