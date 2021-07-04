@@ -12,7 +12,7 @@ def main(argv):
     stream = CommonTokenStream(lexer)
     parser = ccedilhaParser(stream)
     tree = parser.prog()
-    print(tree.toStringTree(recog=parser))
+    # print(tree.toStringTree(recog=parser))
 
     c = ccedilhaVisitor()
     c.visitProg(tree)

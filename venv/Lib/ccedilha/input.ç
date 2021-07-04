@@ -1,7 +1,5 @@
 nada principal(){
-    sentenca aç 
-    sentenca aç   
-    a igual "batta"ç
-    a igual "batata"ç  
+    inteiro aç    
+    a igual (20 mais 30) vezes 40ç  
     amostrar(a)ç   
 }

@@ -69,23 +69,18 @@ class ccedilhaVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by ccedilhaParser#exprMultDiv.
     def visitExprMultDiv(self, ctx:ccedilhaParser.ExprMultDivContext):
-        left = self.visit(ctx.expr(0))
-        right = self.visit(ctx.expr(1))
-        if ctx.MULT() is not None:
-            return left * right
-        else:
-            return left / right       
+        return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by ccedilhaParser#exprParen.
     def visitExprParen(self, ctx:ccedilhaParser.ExprParenContext):
-        return self.visit(ctx.expr())
+        return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by ccedilhaParser#exprPlusMinus.
     def visitExprPlusMinus(self, ctx:ccedilhaParser.ExprPlusMinusContext):
-        left = self.visit(ctx.expr(0))
-        right = self.visit(ctx.expr(1))
+        left = self.visit(ctx.expr[0])
+        right = self.visit(ctx.expr[1])
         if ctx.PLUS() is not None:
             return left + right
         else:
