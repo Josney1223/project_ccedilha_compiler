@@ -26,9 +26,9 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitAtt(self, ctx:ccedilhaParser.AttContext):        
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
-            if ctx.expr() is not None and self.Ids.check_exist(att_name, int):
+            if ctx.expr() is not None:
                 self.Ids.setValue(att_name, self.visit(ctx.expr()), int)
-            elif ctx.STRING() is not None and self.Ids.check_exist(att_name, str):
+            elif ctx.STRING() is not None:
                 self.Ids.setValue(att_name, ctx.STRING().getText(), str)
         return self.visitChildren(ctx)
 
@@ -62,7 +62,10 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
             valor = self.Ids.getValue(att_name, int)
-            self.Ids.setValue(att_name, valor + 1, int)
+            if valor is not None:
+                self.Ids.setValue(att_name, valor + 1, int)
+            else:
+                raise TypeError
         return self.visitChildren(ctx)
 
 
@@ -71,7 +74,10 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
             valor = self.Ids.getValue(att_name, int)
-            self.Ids.setValue(att_name, valor - 1, int)
+            if valor is not None:
+                self.Ids.setValue(att_name, valor - 1, int)
+            else:
+                raise TypeError
         return self.visitChildren(ctx)
 
 

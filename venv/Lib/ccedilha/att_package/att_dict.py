@@ -6,7 +6,7 @@ class AttDict:
         self.dictionary = {}
 
     def insert(self, att_name: str, value, t: type):
-        if not self.check_exist(att_name, t):
+        if not self.check_exist(att_name, "wildcard"):
             self.dictionary[att_name] = att.Att(value, t)        
 
     def getValue(self, att_name, t: type):
