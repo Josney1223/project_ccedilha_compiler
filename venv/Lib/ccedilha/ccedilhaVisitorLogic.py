@@ -103,7 +103,10 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
             valor = self.Ids.getValue(att_name, int)
-            self.Ids.setValue(att_name, valor + 1, int)
+            if valor is not None:
+                self.Ids.setValue(att_name, valor + 1, int)
+            else:
+                raise TypeError
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#funcMinusMinus.
@@ -111,7 +114,10 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
             valor = self.Ids.getValue(att_name, int)
-            self.Ids.setValue(att_name, valor - 1, int)
+            if valor is not None:
+                self.Ids.setValue(att_name, valor - 1, int)
+            else:
+                raise TypeError
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#exprMultDiv.
