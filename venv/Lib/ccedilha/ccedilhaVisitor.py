@@ -24,8 +24,18 @@ class ccedilhaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by ccedilhaParser#code.
+    def visitCode(self, ctx:ccedilhaParser.CodeContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by ccedilhaParser#dec.
     def visitDec(self, ctx:ccedilhaParser.DecContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#list_type.
+    def visitList_type(self, ctx:ccedilhaParser.List_typeContext):
         return self.visitChildren(ctx)
 
 

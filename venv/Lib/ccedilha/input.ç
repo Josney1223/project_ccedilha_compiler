@@ -1,5 +1,5 @@
 nada principal(){
-    talvez aç
-    a igual 95 menorIgual 94ç
-    amostrar(a)ç
+    inteiro x[10]ç
+    x[5] igual 90ç
+    amostrar(x)ç
 }

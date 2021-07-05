@@ -1,4 +1,4 @@
-# Generated from d:\Projetos\project_ccedilha_compiler\venv\Lib\ccedilha\ccedilha.g4 by ANTLR 4.8
+# Generated from ccedilha.g4 by ANTLR 4.9.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .ccedilhaParser import ccedilhaParser
@@ -35,12 +35,30 @@ class ccedilhaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ccedilhaParser#code.
+    def enterCode(self, ctx:ccedilhaParser.CodeContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#code.
+    def exitCode(self, ctx:ccedilhaParser.CodeContext):
+        pass
+
+
     # Enter a parse tree produced by ccedilhaParser#dec.
     def enterDec(self, ctx:ccedilhaParser.DecContext):
         pass
 
     # Exit a parse tree produced by ccedilhaParser#dec.
     def exitDec(self, ctx:ccedilhaParser.DecContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#list_type.
+    def enterList_type(self, ctx:ccedilhaParser.List_typeContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#list_type.
+    def exitList_type(self, ctx:ccedilhaParser.List_typeContext):
         pass
 
 

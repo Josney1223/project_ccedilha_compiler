@@ -39,6 +39,8 @@ FLOAT: [0-9]+'.'[0-9]+; // Float
 //CHAR: [];
 BOOL: 'verdadeiro'|'falso';
 ID: [a-zA-Z]+; // Id das variaveis
+LBOX: '[';
+RBOX: ']';
 LKEY: '{';
 RKEY: '}';
 LPAREN: '(';

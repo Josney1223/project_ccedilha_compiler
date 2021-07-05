@@ -5,9 +5,9 @@ class AttDict:
     def __init__(self):
         self.dictionary = {}
 
-    def insert(self, att_name: str, value, t: type):
+    def insert(self, att_name: str, value, t: type, isList: bool, size: int):
         if not self.check_exist(att_name, "wildcard"):
-            self.dictionary[att_name] = att.Att(value, t)        
+            self.dictionary[att_name] = att.Att(value, t, isList, size)        
 
     def getValue(self, att_name, t: type):
         if self.check_exist(att_name, t):
@@ -20,6 +20,12 @@ class AttDict:
             self.dictionary[att_name].setValue(value, t)
         else: 
             raise TypeError
+    
+    def insertList(self, att_name: str, index: int, value, t: type):
+        if self.check_exist(att_name, t):
+            self.dictionary[att_name].insertList(index, value, t)
+        else: 
+            raise TypeError        
 
     def check_exist(self, att_name: str, t: type):
         if att_name in self.dictionary:
