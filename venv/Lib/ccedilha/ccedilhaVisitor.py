@@ -34,6 +34,11 @@ class ccedilhaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by ccedilhaParser#basic_logic.
+    def visitBasic_logic(self, ctx:ccedilhaParser.Basic_logicContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by ccedilhaParser#funcPrint.
     def visitFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):
         return self.visitChildren(ctx)
@@ -46,6 +51,31 @@ class ccedilhaVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by ccedilhaParser#funcMinusMinus.
     def visitFuncMinusMinus(self, ctx:ccedilhaParser.FuncMinusMinusContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#boolean.
+    def visitBoolean(self, ctx:ccedilhaParser.BooleanContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#expr_boolParen.
+    def visitExpr_boolParen(self, ctx:ccedilhaParser.Expr_boolParenContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#Bool.
+    def visitBool(self, ctx:ccedilhaParser.BoolContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#expr_boolLogic.
+    def visitExpr_boolLogic(self, ctx:ccedilhaParser.Expr_boolLogicContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#expr_boolAndOr.
+    def visitExpr_boolAndOr(self, ctx:ccedilhaParser.Expr_boolAndOrContext):
         return self.visitChildren(ctx)
 
 

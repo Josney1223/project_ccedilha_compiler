@@ -1,4 +1,4 @@
-# Generated from ccedilha.g4 by ANTLR 4.9.2
+# Generated from d:\Projetos\project_ccedilha_compiler\venv\Lib\ccedilha\ccedilha.g4 by ANTLR 4.8
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .ccedilhaParser import ccedilhaParser
@@ -53,6 +53,15 @@ class ccedilhaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ccedilhaParser#basic_logic.
+    def enterBasic_logic(self, ctx:ccedilhaParser.Basic_logicContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#basic_logic.
+    def exitBasic_logic(self, ctx:ccedilhaParser.Basic_logicContext):
+        pass
+
+
     # Enter a parse tree produced by ccedilhaParser#funcPrint.
     def enterFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):
         pass
@@ -77,6 +86,51 @@ class ccedilhaListener(ParseTreeListener):
 
     # Exit a parse tree produced by ccedilhaParser#funcMinusMinus.
     def exitFuncMinusMinus(self, ctx:ccedilhaParser.FuncMinusMinusContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#boolean.
+    def enterBoolean(self, ctx:ccedilhaParser.BooleanContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#boolean.
+    def exitBoolean(self, ctx:ccedilhaParser.BooleanContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#expr_boolParen.
+    def enterExpr_boolParen(self, ctx:ccedilhaParser.Expr_boolParenContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#expr_boolParen.
+    def exitExpr_boolParen(self, ctx:ccedilhaParser.Expr_boolParenContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#Bool.
+    def enterBool(self, ctx:ccedilhaParser.BoolContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#Bool.
+    def exitBool(self, ctx:ccedilhaParser.BoolContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#expr_boolLogic.
+    def enterExpr_boolLogic(self, ctx:ccedilhaParser.Expr_boolLogicContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#expr_boolLogic.
+    def exitExpr_boolLogic(self, ctx:ccedilhaParser.Expr_boolLogicContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#expr_boolAndOr.
+    def enterExpr_boolAndOr(self, ctx:ccedilhaParser.Expr_boolAndOrContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#expr_boolAndOr.
+    def exitExpr_boolAndOr(self, ctx:ccedilhaParser.Expr_boolAndOrContext):
         pass
 
 

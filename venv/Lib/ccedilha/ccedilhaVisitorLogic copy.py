@@ -24,26 +24,22 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitAtt(self, ctx:ccedilhaParser.AttContext):        
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
-        else:
-            att_name = self.visit(ctx.dec())
-        if ctx.expr() is not None:
-            self.Ids.setValue(att_name, self.visit(ctx.expr()), int)
-        elif ctx.STRING() is not None:
-            self.Ids.setValue(att_name, ctx.STRING().getText(), str)
-        elif ctx.expr_bool() is not None:
-            self.Ids.setValue(att_name, self.visit(ctx.expr_bool()), bool)
+            if ctx.expr() is not None:
+                self.Ids.setValue(att_name, self.visit(ctx.expr()), int)
+            elif ctx.STRING() is not None:
+                self.Ids.setValue(att_name, ctx.STRING().getText(), str)
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#dec.
     def visitDec(self, ctx:ccedilhaParser.DecContext):        
         t = self.get_type(ctx.basic_type().getText())
-        if not self.Ids.check_exist(ctx.ID().getText(), t):
-            self.Ids.insert(ctx.ID().getText(), None, t)        
-        return ctx.ID().getText()
+        if not self.Ids.check_exist(ctx.ID().getText(), t) and t is not None:
+            self.Ids.insert(ctx.ID().getText(), None, t)
+        return self.visitChildren(ctx)
     
     # Visit a parse tree produced by ccedilhaParser#boolean.
     def visitBoolean(self, ctx:ccedilhaParser.BooleanContext):
-        if self.visit(ctx.expr_bool()):
+        if self.visit(ctx.expr_bool()) == 'verdadeiro':
             return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#basic_type.
@@ -70,14 +66,22 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         left, right = None, None
         if ctx.expr(0) is not None and ctx.expr(1) is not None:
             left = self.visit(ctx.expr(0))
-            right = self.visit(ctx.expr(1))  
-            return self.return_bool_logic(ctx, left, right)                      
+            right = self.visit(ctx.expr(1))                        
         elif ctx.STRING(0) is not None and ctx.STRING(1) is not None:
             left = ctx.STRING(0).getText()
             right = ctx.STRING(1).getText()
-            return self.return_bool_logic(ctx, left, right)
-        else:
-            raise TypeError       
+        if ctx.basic_logic().EQUAL_EQUAL() is not None:
+            return (left == right)
+        elif ctx.basic_logic().NOT_EQUAL() is not None:
+            return (left != right)
+        elif ctx.basic_logic().GREATER() is not None:
+            return (left > right)
+        elif ctx.basic_logic().GREATER_EQUAL() is not None:
+            return (left >= right)
+        elif ctx.basic_logic().LESSER_EQUAL() is not None:
+            return (left <= right)
+        elif ctx.basic_logic().LESSER() is not None:
+            return (left < right)        
 
     # Visit a parse tree produced by ccedilhaParser#expr_boolAndOr.
     def visitExpr_boolAndOr(self, ctx:ccedilhaParser.Expr_boolAndOrContext):
@@ -95,7 +99,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         elif ctx.INT() is not None:
             print(ctx.INT().getText())
         elif ctx.STRING() is not None:
-            print(ctx.STRING().getText())        
+            print(ctx.STRING().getText())
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#funcPlusPlus.
@@ -103,10 +107,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
             valor = self.Ids.getValue(att_name, int)
-            if valor is not None:
-                self.Ids.setValue(att_name, valor + 1, int)
-            else:
-                raise TypeError
+            self.Ids.setValue(att_name, valor + 1, int)
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#funcMinusMinus.
@@ -114,10 +115,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if ctx.ID() is not None:
             att_name = ctx.ID().getText()
             valor = self.Ids.getValue(att_name, int)
-            if valor is not None:
-                self.Ids.setValue(att_name, valor - 1, int)
-            else:
-                raise TypeError
+            self.Ids.setValue(att_name, valor - 1, int)
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#exprMultDiv.
@@ -150,20 +148,6 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitId(self, ctx:ccedilhaParser.IdContext):
         return int(self.Ids.getValue(ctx.ID().getText(), int))
 
-    def return_bool_logic(self, ctx, left, right):
-        if ctx.basic_logic().EQUAL_EQUAL() is not None:
-            return (left == right)
-        elif ctx.basic_logic().NOT_EQUAL() is not None:
-            return (left != right)
-        elif ctx.basic_logic().GREATER() is not None:
-            return (left > right)
-        elif ctx.basic_logic().GREATER_EQUAL() is not None:
-            return (left >= right)
-        elif ctx.basic_logic().LESSER_EQUAL() is not None:
-            return (left <= right)
-        elif ctx.basic_logic().LESSER() is not None:
-            return (left < right)
-        
     def get_type(self, s: str) -> type:
         if s.strip() == "inteiro":
             return int

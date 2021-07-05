@@ -9,7 +9,9 @@ DEBOOL: 'talvez ';
 DECHAR: 'letra ';
 
 //Operadores Relacionais e Logicos
+NOT_EQUAL: ' diferente ';
 EQUAL: ' igual ';
+EQUAL_EQUAL: ' igualIgual ';
 IF: 'se';
 ELSE: 'senao';
 WHILE: 'enquanto';
