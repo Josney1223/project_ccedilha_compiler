@@ -1,4 +1,5 @@
-from func_package.func import func
+from venv.Lib.ccedilha.func_package.func import func
+
 
 class funcDict():
     def __init__(self):

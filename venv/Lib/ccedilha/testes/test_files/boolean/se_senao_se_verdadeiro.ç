@@ -1,0 +1,9 @@
+nada principal(){
+    se (falso){
+        inteiro a igual 1ç
+    }senao se(verdadeiro){
+        inteiro a igual 2ç
+    }senao{
+        inteiro a igual 3ç
+    }
+}

@@ -1,16 +1,16 @@
 nada principal(){
     inteiro a igual 12ç
     inteiro count igual 0ç
-    inteiro xç 
+    inteiro xç
     enquanto(count menor a){
-        x igual fibo(count)ç 
-        amostrar(x)ç       
+        x igual fibo(count)ç
+        amostrar(x)ç
         count maisMaisç
     }
 }
 
 inteiro fibo(inteiro b){
-    se(b menorIgual 1){           
+    se(b menorIgual 1){
         volte bç
     } senao {
         volte fibo(b menos 1) mais fibo(b menos 2)ç
