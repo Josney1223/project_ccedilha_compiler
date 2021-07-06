@@ -1,5 +1,8 @@
 nada principal(){
-    inteiro x[10]ç
-    x[5] igual 90ç
-    amostrar(x)ç
+    talvez a igual verdadeiroç
+    amostrar(a)ç
+}
+
+inteiro batata(inteiro a, sentenca j){
+
 }

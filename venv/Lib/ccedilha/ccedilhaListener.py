@@ -1,4 +1,4 @@
-# Generated from ccedilha.g4 by ANTLR 4.9.2
+# Generated from d:\Projetos\project_ccedilha_compiler\venv\Lib\ccedilha\ccedilha.g4 by ANTLR 4.8
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .ccedilhaParser import ccedilhaParser
@@ -80,6 +80,24 @@ class ccedilhaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ccedilhaParser#func_dec.
+    def enterFunc_dec(self, ctx:ccedilhaParser.Func_decContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#func_dec.
+    def exitFunc_dec(self, ctx:ccedilhaParser.Func_decContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#func_call.
+    def enterFunc_call(self, ctx:ccedilhaParser.Func_callContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#func_call.
+    def exitFunc_call(self, ctx:ccedilhaParser.Func_callContext):
+        pass
+
+
     # Enter a parse tree produced by ccedilhaParser#funcPrint.
     def enterFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):
         pass
@@ -104,6 +122,15 @@ class ccedilhaListener(ParseTreeListener):
 
     # Exit a parse tree produced by ccedilhaParser#funcMinusMinus.
     def exitFuncMinusMinus(self, ctx:ccedilhaParser.FuncMinusMinusContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#args.
+    def enterArgs(self, ctx:ccedilhaParser.ArgsContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#args.
+    def exitArgs(self, ctx:ccedilhaParser.ArgsContext):
         pass
 
 

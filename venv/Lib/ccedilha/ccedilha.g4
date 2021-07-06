@@ -2,14 +2,14 @@
 grammar ccedilha;
 import ccedilhaTokens;
 
-prog: main;
+prog: main func_dec*;
 
 main: 'nada principal()' LKEY code RKEY; 
 
 att: (dec | ID | list_type) EQUAL (expr | STRING | expr_bool) ENDLINE        
     ; 
 
-code: (func | att | dec | boolean)*
+code: (func | att | dec | boolean | func_call)*
     ;
 
 dec: basic_type ID
@@ -27,11 +27,20 @@ basic_type: (DEINT | DESTRING | DEFLOAT | DEBOOL | DECHAR)
 basic_logic: (NOT_EQUAL | EQUAL_EQUAL | GREATER | GREATER_EQUAL | LESSER_EQUAL | LESSER)
     ;
 
-func: 'amostrar' LPAREN (STRING | INT | ID) RPAREN ENDLINE #funcPrint
-    | ID PLUS_PLUS ENDLINE #funcPlusPlus
-    | ID MINUS_MINUS ENDLINE #funcMinusMinus
+func_dec: basic_type ID LPAREN (basic_type ID)? RPAREN LKEY code RKEY
+    | basic_type ID LPAREN (basic_type ID ',')+ (basic_type ID) RPAREN LKEY code RKEY
     ;
 
+func_call: (ID LPAREN args? RPAREN | ID LPAREN (args ',')+ args RPAREN) ENDLINE
+    ;
+    
+func: 'amostrar' LPAREN (STRING | INT | ID) RPAREN ENDLINE #funcPrint
+    | ID PLUS_PLUS ENDLINE #funcPlusPlus
+    | ID MINUS_MINUS ENDLINE #funcMinusMinus  
+    ;
+
+args: (expr | STRING | expr_bool | ID)
+    ;
 boolean: IF LPAREN expr_bool RPAREN LKEY code RKEY (ELSE boolean | ELSE LKEY code RKEY)?
     | WHILE LPAREN expr_bool RPAREN LKEY code RKEY
     ;

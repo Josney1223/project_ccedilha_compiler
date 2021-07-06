@@ -1,6 +1,8 @@
 # Generated from ccedilha.g4 by ANTLR 4.9.2
 from att_package import att_dict
 from antlr4 import *
+
+from func_package.func_dict import funcDict
 if __name__ is not None and "." in __name__:
     from .ccedilhaParser import ccedilhaParser
 else:
@@ -11,11 +13,36 @@ else:
 class ccedilhaVisitorLogic(ParseTreeVisitor):
     def __init__(self):
         self.Ids = att_dict.AttDict()
+        self.functions = funcDict()
+        self.local_Ids = att_dict.AttDict()
+        self.local_Ids_active = False       
 
     # Visit a parse tree produced by ccedilhaParser#prog.
     def visitProg(self, ctx:ccedilhaParser.ProgContext):
-        return self.visitChildren(ctx)
+        for i in ctx.func_dec():
+            self.visit(i)
+        self.visit(ctx.main())
 
+    # Visit a parse tree produced by ccedilhaParser#func_dec.
+    def visitFunc_dec(self, ctx:ccedilhaParser.Func_decContext):          
+        x, args = 1, []        
+        while(ctx.basic_type(x) is not None):
+            args.append((self.get_type(ctx.basic_type(x).getText()), ctx.ID(x).getText()))
+            x += 1
+        self.functions.insertFunction(ctx.ID(0).getText(), self.get_type(ctx.basic_type(0).getText()), args, ctx.code()) 
+        return self.visitChildren(ctx)
+    
+    # Visit a parse tree produced by ccedilhaParser#func_call.
+    def visitFunc_call(self, ctx:ccedilhaParser.Func_callContext):
+        del self.local_Ids
+        self.local_Ids_active, self.local_Ids = True, att_dict.AttDict()
+        x, args = 0, self.functions.get_args(ctx.ID().getText())       
+        while(ctx.args(x) is not None): 
+            self.local_Ids.insert(args[x][1], ctx.args(x).getText(), args[x][0], False, 0)
+            x += 1
+        func_tree = self.functions.call_function(ctx.ID().getText(), args)      
+        return self.visit(func_tree)
+    
     # Visit a parse tree produced by ccedilhaParser#main.
     def visitMain(self, ctx:ccedilhaParser.MainContext):
         return self.visitChildren(ctx)
@@ -117,6 +144,10 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         else:
             return (left or right)        
 
+    # Visit a parse tree produced by ccedilhaParser#funcCall.
+    #def visitFuncCall(self, ctx:ccedilhaParser.FuncCallContext):
+    #    return self.visitChildren(ctx)
+    
     # Visit a parse tree produced by ccedilhaParser#funcPrint.
     def visitFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):    
         if ctx.ID() is not None:            
