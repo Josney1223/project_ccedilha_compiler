@@ -31,7 +31,7 @@ func_dec: basic_type ID LPAREN (basic_type ID)? RPAREN LKEY code RKEY
     | basic_type ID LPAREN (basic_type ID ',')+ (basic_type ID) RPAREN LKEY code RKEY
     ;
 
-func_call: (ID LPAREN args? RPAREN | ID LPAREN (args ',')+ args RPAREN) ENDLINE
+func_call: ID LPAREN (args? | (args ',')+ (args) )RPAREN ENDLINE
     ;
     
 func: 'amostrar' LPAREN (STRING | INT | ID) RPAREN ENDLINE #funcPrint
