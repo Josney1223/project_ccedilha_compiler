@@ -1,11 +1,18 @@
 nada principal(){
-    inteiro a igual 95ç
-    batata(a)ç
-    amostrar(a)ç
+    inteiro a igual 12ç
+    inteiro count igual 0ç
+    inteiro xç    
+    enquanto(count menor a){
+        x igual fibo(count)ç 
+        amostrar(x)ç       
+        count maisMaisç
+    }
 }
 
-inteiro batata(inteiro b){   
-    amostrar(b)ç
-    b igual b mais bç
-    amostrar(b)ç
+inteiro fibo(inteiro b){
+    se(b menorIgual 1){           
+        volte bç
+    } senao {
+        volte fibo(b menos 1) mais fibo(b menos 2)ç
+    }
 }

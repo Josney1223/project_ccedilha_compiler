@@ -13,7 +13,8 @@ class AttDict:
         if self.check_exist(att_name, t):
             return self.dictionary[att_name].getValue(t)
         else:
-            raise TypeError
+            self.show_all()
+            raise Exception("Tipo inválido ou variavel "+att_name+" inexistente")
     
     def setValue(self, att_name, value, t: type):
         if self.check_exist(att_name, t):

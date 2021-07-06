@@ -59,6 +59,11 @@ class ccedilhaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by ccedilhaParser#func_end.
+    def visitFunc_end(self, ctx:ccedilhaParser.Func_endContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by ccedilhaParser#funcPrint.
     def visitFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):
         return self.visitChildren(ctx)
@@ -126,6 +131,11 @@ class ccedilhaVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by ccedilhaParser#id.
     def visitId(self, ctx:ccedilhaParser.IdContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ccedilhaParser#exprFuncCall.
+    def visitExprFuncCall(self, ctx:ccedilhaParser.ExprFuncCallContext):
         return self.visitChildren(ctx)
 
 

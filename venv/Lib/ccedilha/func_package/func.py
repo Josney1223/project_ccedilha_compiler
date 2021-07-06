@@ -13,3 +13,6 @@ class func():
         
     def get_args(self):
         return self.args
+    
+    def get_type(self):
+        return self.t

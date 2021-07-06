@@ -17,6 +17,10 @@ class funcDict():
     def get_args(self, func_name: str):
         if self.check_exist(func_name):
             return self.functions[func_name].get_args()
+    
+    def get_type(self, func_name: str):
+        if self.check_exist(func_name):
+            return self.functions[func_name].get_type()
         
     def check_exist(self, func_name: str):
         if func_name in self.functions:          

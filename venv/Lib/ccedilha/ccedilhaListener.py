@@ -98,6 +98,15 @@ class ccedilhaListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ccedilhaParser#func_end.
+    def enterFunc_end(self, ctx:ccedilhaParser.Func_endContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#func_end.
+    def exitFunc_end(self, ctx:ccedilhaParser.Func_endContext):
+        pass
+
+
     # Enter a parse tree produced by ccedilhaParser#funcPrint.
     def enterFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):
         pass
@@ -221,6 +230,15 @@ class ccedilhaListener(ParseTreeListener):
 
     # Exit a parse tree produced by ccedilhaParser#id.
     def exitId(self, ctx:ccedilhaParser.IdContext):
+        pass
+
+
+    # Enter a parse tree produced by ccedilhaParser#exprFuncCall.
+    def enterExprFuncCall(self, ctx:ccedilhaParser.ExprFuncCallContext):
+        pass
+
+    # Exit a parse tree produced by ccedilhaParser#exprFuncCall.
+    def exitExprFuncCall(self, ctx:ccedilhaParser.ExprFuncCallContext):
         pass
 
 
