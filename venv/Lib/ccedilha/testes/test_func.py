@@ -32,7 +32,7 @@ class TestCcedilhaFunc(unittest.TestCase):
         var_value = c.local_Ids[0].dictionary['a'].value
         var_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(equivalent_value, var_value)
-        self.assertEqual(var_type, int)
+        self.assertEqual(int, var_type)
 
     def test_func_minusminus(self):
         path = os.path.join(self.func_test_dir, "menosMenos.ç")
@@ -56,7 +56,7 @@ class TestCcedilhaFunc(unittest.TestCase):
         var_value = c.local_Ids[0].dictionary['a'].value
         var_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(equivalent_value, var_value)
-        self.assertEqual(var_type, int)
+        self.assertEqual(int, var_type)
 
     def test_func_print(self):
         path = os.path.join(self.func_test_dir, "amostrar.ç")

@@ -22,8 +22,8 @@ class TestCcedilhaBoolean(unittest.TestCase):
 
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
-        self.assertEqual(a_value, True)
-        self.assertEqual(a_type, bool)
+        self.assertEqual(True, a_value)
+        self.assertEqual(bool, a_type)
 
     def test_boolean_se_falso(self):
         path = os.path.join(self.test_dir, "se_falso.ç")
@@ -37,8 +37,8 @@ class TestCcedilhaBoolean(unittest.TestCase):
 
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
-        self.assertEqual(a_value, False)
-        self.assertEqual(a_type, bool)
+        self.assertEqual(False, a_value)
+        self.assertEqual(bool, a_type)
 
     def test_boolean_se_senao_se_verdadeiro(self):
         path = os.path.join(self.test_dir, "se_senao_se_verdadeiro.ç")
@@ -52,8 +52,8 @@ class TestCcedilhaBoolean(unittest.TestCase):
 
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
-        self.assertEqual(a_value, 2)
-        self.assertEqual(a_type, int)
+        self.assertEqual(2, a_value)
+        self.assertEqual(int, a_type)
 
     def test_boolean_se_senao_se_falso(self):
         path = os.path.join(self.test_dir, "se_senao_se_falso.ç")
@@ -67,8 +67,8 @@ class TestCcedilhaBoolean(unittest.TestCase):
 
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
-        self.assertEqual(a_value, 3)
-        self.assertEqual(a_type, int)
+        self.assertEqual(3, a_value)
+        self.assertEqual(int, a_type)
 
     def test_boolean_enquanto(self):
         path = os.path.join(self.test_dir, "enquanto.ç")
@@ -82,5 +82,5 @@ class TestCcedilhaBoolean(unittest.TestCase):
 
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
-        self.assertEqual(a_value, 10)
-        self.assertEqual(a_type, int)
+        self.assertEqual(10, a_value)
+        self.assertEqual(int, a_type)

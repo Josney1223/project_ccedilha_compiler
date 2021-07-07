@@ -22,20 +22,20 @@ class TestCcedilhaDec(unittest.TestCase):
 
         a_type = c.local_Ids[0].dictionary['a'].type
         a_is_list = c.local_Ids[0].dictionary['a'].isList
-        self.assertEqual(a_type, bool)
-        self.assertEqual(a_is_list, False)
+        self.assertEqual(bool, a_type)
+        self.assertEqual(False, a_is_list)
 
         b_type = c.local_Ids[0].dictionary['b'].type
         b_is_list = c.local_Ids[0].dictionary['b'].isList
-        self.assertEqual(b_type, int)
-        self.assertEqual(b_is_list, False)
+        self.assertEqual(int, b_type)
+        self.assertEqual(False, b_is_list)
 
         x_type = c.local_Ids[0].dictionary['x'].type
         x_is_list = c.local_Ids[0].dictionary['x'].isList
-        self.assertEqual(x_type, str)
-        self.assertEqual(x_is_list, False)
+        self.assertEqual(str, x_type)
+        self.assertEqual(False, x_is_list)
 
         y_type = c.local_Ids[0].dictionary['y'].type
         y_is_list = c.local_Ids[0].dictionary['y'].isList
-        self.assertEqual(y_type, bool)
-        self.assertEqual(y_is_list, True)
+        self.assertEqual(bool, y_type)
+        self.assertEqual(True, y_is_list)

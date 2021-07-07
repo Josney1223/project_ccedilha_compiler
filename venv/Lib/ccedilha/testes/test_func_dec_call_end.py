@@ -23,7 +23,7 @@ class TestCcedilhaFuncEnd(unittest.TestCase):
         var_value = c.local_Ids[0].dictionary['a'].value
         var_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(10, var_value)
-        self.assertEqual(var_type, int)
+        self.assertEqual(int, var_type)
 
     def test_func_end_com_parametros(self):
         path = os.path.join(self.func_test_dir, "com_parametros.ç")
@@ -38,4 +38,4 @@ class TestCcedilhaFuncEnd(unittest.TestCase):
         var_value = c.local_Ids[0].dictionary['a'].value
         var_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(40, var_value)
-        self.assertEqual(var_type, int)
+        self.assertEqual(int, var_type)

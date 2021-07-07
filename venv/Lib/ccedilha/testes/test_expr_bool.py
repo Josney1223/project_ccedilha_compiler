@@ -28,22 +28,22 @@ class TestCcedilhaExprBool(unittest.TestCase):
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(a, a_value)
-        self.assertEqual(a_type, bool)
+        self.assertEqual(bool, a_type)
 
         b_value = c.local_Ids[0].dictionary['b'].value
         b_type = c.local_Ids[0].dictionary['b'].type
         self.assertEqual(b, b_value)
-        self.assertEqual(b_type, bool)
+        self.assertEqual(bool, b_type)
 
         ce_value = c.local_Ids[0].dictionary['c'].value
         ce_type = c.local_Ids[0].dictionary['c'].type
         self.assertEqual(ce, ce_value)
-        self.assertEqual(ce_type, bool)
+        self.assertEqual(bool, ce_type)
 
         d_value = c.local_Ids[0].dictionary['d'].value
         d_type = c.local_Ids[0].dictionary['d'].type
         self.assertEqual(d, d_value)
-        self.assertEqual(d_type, bool)
+        self.assertEqual(bool, d_type)
 
     def test_expr_bool_or(self):
         path = os.path.join(self.test_dir, "ou.ç")
@@ -63,22 +63,22 @@ class TestCcedilhaExprBool(unittest.TestCase):
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(a, a_value)
-        self.assertEqual(a_type, bool)
+        self.assertEqual(bool, a_type)
 
         b_value = c.local_Ids[0].dictionary['b'].value
         b_type = c.local_Ids[0].dictionary['b'].type
         self.assertEqual(b, b_value)
-        self.assertEqual(b_type, bool)
+        self.assertEqual(bool, b_type)
 
         ce_value = c.local_Ids[0].dictionary['c'].value
         ce_type = c.local_Ids[0].dictionary['c'].type
         self.assertEqual(ce, ce_value)
-        self.assertEqual(ce_type, bool)
+        self.assertEqual(bool, ce_type)
 
         d_value = c.local_Ids[0].dictionary['d'].value
         d_type = c.local_Ids[0].dictionary['d'].type
         self.assertEqual(d, d_value)
-        self.assertEqual(d_type, bool)
+        self.assertEqual(bool, d_type)
 
     def test_expr_bool(self):
         path = os.path.join(self.test_dir, "tudo.ç")
@@ -95,4 +95,4 @@ class TestCcedilhaExprBool(unittest.TestCase):
         a_value = c.local_Ids[0].dictionary['a'].value
         a_type = c.local_Ids[0].dictionary['a'].type
         self.assertEqual(a, a_value)
-        self.assertEqual(a_type, bool)
+        self.assertEqual(bool, a_type)
