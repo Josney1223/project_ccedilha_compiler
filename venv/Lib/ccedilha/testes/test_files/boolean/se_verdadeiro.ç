@@ -1,0 +1,7 @@
+nada principal(){
+    se (verdadeiro){
+        talvez a igual verdadeiroç
+    }senao{
+        talvez a igual falsoç
+    }
+}

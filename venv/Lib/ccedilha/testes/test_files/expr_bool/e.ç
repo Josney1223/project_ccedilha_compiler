@@ -1,0 +1,6 @@
+nada principal(){
+    talvez a igual verdadeiro e verdadeiroç
+    talvez b igual verdadeiro e falsoç
+    talvez c igual falso e verdadeiroç
+    talvez d igual falso e falsoç
+}
