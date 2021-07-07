@@ -3,7 +3,7 @@ from att_package import att_dict
 from antlr4 import *
 
 from func_package.func_dict import funcDict
-if __name__ is not None and "." in __name__:
+if __name__ and "." in __name__:
     from .ccedilhaParser import ccedilhaParser
 else:
     from ccedilhaParser import ccedilhaParser
@@ -27,7 +27,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     # Visit a parse tree produced by ccedilhaParser#func_dec.
     def visitFunc_dec(self, ctx:ccedilhaParser.Func_decContext):          
         x, args = 1, []        
-        while(ctx.basic_type(x) is not None):
+        while(ctx.basic_type(x)):
             args.append((self.get_type(ctx.basic_type(x).getText()), ctx.ID(x).getText()))
             x += 1
         self.functions.insertFunction(ctx.ID(0).getText(), self.get_type(ctx.basic_type(0).getText()), args, ctx.code())         
@@ -35,21 +35,21 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     # Visit a parse tree produced by ccedilhaParser#func_call.
     def visitFunc_call(self, ctx:ccedilhaParser.Func_callContext):                
         x, args = 0, []
-        while(ctx.args(x) is not None):
-            if ctx.args(x).expr() is not None:
+        while(ctx.args(x)):
+            if ctx.args(x).expr():
                 args.append(self.visit(ctx.args(x).expr()))
-            elif ctx.args(x).expr_bool() is not None:
+            elif ctx.args(x).expr_bool():
                 args.append(self.visit(ctx.args(x).expr_bool()))   
-            elif ctx.args(x).STRING() is not None:
+            elif ctx.args(x).STRING():
                 args.append(ctx.args(x).STRING().getText())
-            elif ctx.args(x).ID() is not None:
+            elif ctx.args(x).ID():
                 args.append(self.visit(ctx.args(x).ID()))                         
             x += 1
         self.actual_context += 1
         self.local_Ids.append(att_dict.AttDict())
         
         x, args_dec = 0, self.functions.get_args(ctx.ID().getText())   
-        while(ctx.args(x) is not None):            
+        while(ctx.args(x)):            
             if self.local_Ids[self.actual_context-1].check_exist(ctx.args(x).getText(),"wildcard"): 
                 self.local_Ids[self.actual_context].insert(args_dec[x][1], self.local_Ids[self.actual_context-1].getValue(ctx.args(x).getText(),"wildcard"), args_dec[x][0], False, 0)                
             else:                
@@ -66,15 +66,15 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     
     # Visit a parse tree produced by ccedilhaParser#func_end.
     def visitFunc_end(self, ctx:ccedilhaParser.Func_endContext):
-        if ctx.expr() is not None:
+        if ctx.expr():
             self.func_return = self.visit(ctx.expr())
-        elif ctx.STRING() is not None:
+        elif ctx.STRING():
             self.func_return = self.visit(ctx.STRING())
-        elif ctx.expr_bool() is not None:
+        elif ctx.expr_bool():
             self.func_return = self.visit(ctx.expr_bool())
-        elif ctx.ID() is not None:
+        elif ctx.ID():
             self.func_return = self.visit(ctx.ID())
-        elif ctx.func_call() is not None:
+        elif ctx.func_call():
             self.func_return = self.visit(ctx.func_call())           
     
     # Visit a parse tree produced by ccedilhaParser#main.
@@ -84,31 +84,31 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     # Visit a parse tree produced by ccedilhaParser#att.
     def visitAtt(self, ctx:ccedilhaParser.AttContext):
         if self.func_return is None:            
-            if ctx.ID(0) is not None:                
-                att_name = ctx.ID(0).getText()   
-            elif ctx.list_type() is not None:
-                att_name = ctx.list_type().ID(0).getText()
-                index = int(ctx.list_type().INT().getText())                         
+            if ctx.ID(0):
+                att_name = ctx.ID(0).getText()                                   
+            elif ctx.list_type():
+                att_name = ctx.list_type().ID().getText()
+                index = int(ctx.list_type().INT().getText())                      
             else:
                 att_name = self.visit(ctx.dec())
                 
             if ctx.list_type() is None:
-                if ctx.expr() is not None:
+                if ctx.expr():
                     self.local_Ids[self.actual_context].setValue(att_name, self.visit(ctx.expr()), int)
-                elif ctx.STRING() is not None:
+                elif ctx.STRING():
                     self.local_Ids[self.actual_context].setValue(att_name, ctx.STRING().getText(), str)
-                elif ctx.expr_bool() is not None:
+                elif ctx.expr_bool():
                     self.local_Ids[self.actual_context].setValue(att_name, self.visit(ctx.expr_bool()), bool)
-                elif ctx.func_call() is not None:
+                elif ctx.func_call():
                     self.local_Ids[self.actual_context].setValue(att_name, self.visit(ctx.func_call()), self.functions.get_type(ctx.func_call().ID().getText()))
             else:
-                if ctx.expr() is not None:
+                if ctx.expr():
                     self.local_Ids[self.actual_context].insertList(att_name,index, self.visit(ctx.expr()), int)
-                elif ctx.STRING() is not None:
+                elif ctx.STRING():
                     self.local_Ids[self.actual_context].insertList(att_name,index, ctx.STRING().getText(), str)
-                elif ctx.expr_bool() is not None:
+                elif ctx.expr_bool():
                     self.local_Ids[self.actual_context].insertList(att_name,index, self.visit(ctx.expr_bool()), bool)
-                elif ctx.func_call() is not None:
+                elif ctx.func_call():
                     self.local_Ids[self.actual_context].setValue(att_name, index, self.visit(ctx.func_call()), self.functions.get_type(ctx.func_call().ID().getText()))
             return self.visitChildren(ctx)
 
@@ -116,7 +116,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitDec(self, ctx:ccedilhaParser.DecContext):
         if self.func_return is None:  
             t = self.get_type(ctx.basic_type().getText()) 
-            if ctx.list_type() is not None:
+            if ctx.list_type():
                 aux = (ctx.list_type().ID().getText(),True, int(ctx.list_type().INT().getText()))    
             else:
                 aux = (ctx.ID().getText(), False, 0)       
@@ -128,14 +128,14 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     # Visit a parse tree produced by ccedilhaParser#boolean.
     def visitBoolean(self, ctx:ccedilhaParser.BooleanContext):
         if self.func_return is None: 
-            if ctx.IF() is not None:
+            if ctx.IF():
                 if self.visit(ctx.expr_bool()):
                     self.visit(ctx.code(0))
-                elif ctx.boolean() is not None:
+                elif ctx.boolean():
                     self.visit(ctx.boolean())
-                elif ctx.ELSE() is not None:
+                elif ctx.ELSE():
                     self.visit(ctx.code(1))
-            elif ctx.WHILE() is not None:            
+            elif ctx.WHILE():            
                 while(self.visit(ctx.expr_bool())):
                     self.visit(ctx.code(0))
             
@@ -153,22 +153,24 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
 
     # Visit a parse tree produced by ccedilhaParser#Bool.
     def visitBool(self, ctx:ccedilhaParser.BoolContext):
+        n = True if ctx.NOT() else False
         if ctx.BOOL().getText() == 'verdadeiro':
-            return True
+            return True if not n else False
         else:
-            return False        
+            return False if not n else True       
 
     # Visit a parse tree produced by ccedilhaParser#expr_boolLogic.
     def visitExpr_boolLogic(self, ctx:ccedilhaParser.Expr_boolLogicContext):
         left, right = None, None
-        if ctx.expr(0) is not None and ctx.expr(1) is not None:
+        n = True if ctx.NOT() else False            
+        if ctx.expr(0) and ctx.expr(1):
             left = self.visit(ctx.expr(0))
             right = self.visit(ctx.expr(1))  
-            return self.return_bool_logic(ctx, left, right)                      
-        elif ctx.STRING(0) is not None and ctx.STRING(1) is not None:
+            return self.return_bool_logic(ctx, left, right) if not n else (not self.return_bool_logic(ctx, left, right))                      
+        elif ctx.STRING(0) and ctx.STRING(1):
             left = ctx.STRING(0).getText()
             right = ctx.STRING(1).getText()
-            return self.return_bool_logic(ctx, left, right)
+            return self.return_bool_logic(ctx, left, right) if not n else (not self.return_bool_logic(ctx, left, right))
         else:
             raise TypeError       
 
@@ -176,7 +178,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitExpr_boolAndOr(self, ctx:ccedilhaParser.Expr_boolAndOrContext):
         left = self.visit(ctx.expr_bool(0))
         right = self.visit(ctx.expr_bool(1))
-        if ctx.AND() is not None:
+        if ctx.AND():
             return (left and right)
         else:
             return (left or right)        
@@ -184,18 +186,18 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     # Visit a parse tree produced by ccedilhaParser#funcPrint.
     def visitFuncPrint(self, ctx:ccedilhaParser.FuncPrintContext):
         if self.func_return is None:     
-            if ctx.ID() is not None:
+            if ctx.ID():
                 print(self.local_Ids[self.actual_context].getValue(ctx.ID().getText(), "wildcard"))
-            elif ctx.INT() is not None:
+            elif ctx.INT():
                 print(ctx.INT().getText())
-            elif ctx.STRING() is not None:
+            elif ctx.STRING():
                 print(ctx.STRING().getText())        
             return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ccedilhaParser#funcPlusPlus.
     def visitFuncPlusPlus(self, ctx:ccedilhaParser.FuncPlusPlusContext):
         if self.func_return is None: 
-            if ctx.ID() is not None:
+            if ctx.ID():
                 att_name = ctx.ID().getText()
             valor = self.local_Ids[self.actual_context].getValue(att_name, int)
             if valor is not None:
@@ -207,7 +209,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     # Visit a parse tree produced by ccedilhaParser#funcMinusMinus.
     def visitFuncMinusMinus(self, ctx:ccedilhaParser.FuncMinusMinusContext):
         if self.func_return is None: 
-            if ctx.ID() is not None:
+            if ctx.ID():
                 att_name = ctx.ID().getText()
             valor = self.local_Ids[self.actual_context].getValue(att_name, int)
             if valor is not None:
@@ -220,10 +222,12 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitExprMultDiv(self, ctx:ccedilhaParser.ExprMultDivContext):
         left = self.visit(ctx.expr(0))
         right = self.visit(ctx.expr(1))
-        if ctx.MULT() is not None:
+        if ctx.MULT():
             return left * right
-        else:
+        elif ctx.DIV():
             return left / right       
+        else:
+            return left % right
 
     # Visit a parse tree produced by ccedilhaParser#exprParen.
     def visitExprParen(self, ctx:ccedilhaParser.ExprParenContext):
@@ -233,7 +237,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitExprPlusMinus(self, ctx:ccedilhaParser.ExprPlusMinusContext):
         left = self.visit(ctx.expr(0))
         right = self.visit(ctx.expr(1))
-        if ctx.PLUS() is not None:
+        if ctx.PLUS():
             return left + right
         else:
             return left - right        
@@ -255,27 +259,27 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     
     # Visit a parse tree produced by ccedilhaParser#args.
     def visitArgs(self, ctx:ccedilhaParser.ArgsContext):
-        if ctx.expr() is not None:
+        if ctx.expr():
             return self.visit(ctx.expr())
-        elif ctx.STRING() is not None:
+        elif ctx.STRING():
             return ctx.STRING().getText()
-        elif ctx.expr_bool() is not None:
+        elif ctx.expr_bool():
             return self.visit(ctx.expr_bool())
-        elif ctx.ID() is not None:
+        elif ctx.ID():
             return self.visit(ctx.ID())
         
     def return_bool_logic(self, ctx, left, right):
-        if ctx.basic_logic().EQUAL_EQUAL() is not None:
+        if ctx.basic_logic().EQUAL_EQUAL():
             return (left == right)
-        elif ctx.basic_logic().NOT_EQUAL() is not None:
+        elif ctx.basic_logic().NOT_EQUAL():
             return (left != right)
-        elif ctx.basic_logic().GREATER() is not None:
+        elif ctx.basic_logic().GREATER():
             return (left > right)
-        elif ctx.basic_logic().GREATER_EQUAL() is not None:
+        elif ctx.basic_logic().GREATER_EQUAL():
             return (left >= right)
-        elif ctx.basic_logic().LESSER_EQUAL() is not None:
+        elif ctx.basic_logic().LESSER_EQUAL():
             return (left <= right)
-        elif ctx.basic_logic().LESSER() is not None:
+        elif ctx.basic_logic().LESSER():
             return (left < right)
         
     def get_type(self, s: str) -> type:        

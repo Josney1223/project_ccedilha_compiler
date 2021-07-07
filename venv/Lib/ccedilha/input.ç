@@ -1,7 +1,7 @@
 nada principal(){
     inteiro a igual 12ç
     inteiro count igual 0ç
-    inteiro xç    
+    inteiro xç 
     enquanto(count menor a){
         x igual fibo(count)ç 
         amostrar(x)ç       

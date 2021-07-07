@@ -21,6 +21,7 @@ GREATER_EQUAL: ' maiorIgual ';
 LESSER_EQUAL: ' menorIgual ';
 GREATER: ' maior ';
 LESSER: ' menor ';
+NOT: 'nao ';
 RETURN: 'volte ';
 
 //Operadores Matematicos

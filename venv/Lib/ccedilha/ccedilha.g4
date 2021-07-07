@@ -51,11 +51,11 @@ boolean: IF LPAREN expr_bool RPAREN LKEY code RKEY (ELSE boolean | ELSE LKEY cod
 
 expr_bool: expr_bool ( AND | OR ) expr_bool #expr_boolAndOr
     | LPAREN expr_bool RPAREN #expr_boolParen
-    | (expr | STRING) basic_logic (expr | STRING) #expr_boolLogic
-    | BOOL #Bool    
+    | NOT? (expr | STRING) basic_logic (expr | STRING) #expr_boolLogic
+    | NOT? BOOL #Bool    
     ;
 
-expr: expr ( MULT | DIV ) expr #exprMultDiv
+expr: expr ( MULT | DIV | REST ) expr #exprMultDiv
     | expr ( PLUS | MINUS ) expr #exprPlusMinus
     | INT #Number
     | ID #id

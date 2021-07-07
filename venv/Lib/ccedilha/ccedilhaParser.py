@@ -11,8 +11,8 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3+")
-        buf.write("\u0103\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3,")
+        buf.write("\u0109\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2\7\2%\n\2\f")
         buf.write("\2\16\2(\13\2\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\5\4\62\n")
@@ -31,100 +31,104 @@ def serializedATN():
         buf.write("\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17")
         buf.write("\3\17\3\17\5\17\u00c9\n\17\3\17\3\17\3\17\3\17\3\17\3")
         buf.write("\17\3\17\3\17\5\17\u00d3\n\17\3\20\3\20\3\20\3\20\3\20")
-        buf.write("\3\20\3\20\5\20\u00dc\n\20\3\20\3\20\3\20\5\20\u00e1\n")
-        buf.write("\20\3\20\5\20\u00e4\n\20\3\20\3\20\3\20\7\20\u00e9\n\20")
-        buf.write("\f\20\16\20\u00ec\13\20\3\21\3\21\3\21\3\21\3\21\3\21")
-        buf.write("\3\21\3\21\5\21\u00f6\n\21\3\21\3\21\3\21\3\21\3\21\3")
-        buf.write("\21\7\21\u00fe\n\21\f\21\16\21\u0101\13\21\3\21\2\4\36")
-        buf.write(" \22\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \2\b\3\2\7")
-        buf.write("\13\5\2\f\f\16\16\24\27\4\2!\"%%\3\2\22\23\3\2\33\34\3")
-        buf.write("\2\31\32\2\u0120\2\"\3\2\2\2\4)\3\2\2\2\6\61\3\2\2\2\b")
-        buf.write("G\3\2\2\2\nX\3\2\2\2\fZ\3\2\2\2\16_\3\2\2\2\20a\3\2\2")
-        buf.write("\2\22\u0083\3\2\2\2\24\u0085\3\2\2\2\26\u0097\3\2\2\2")
-        buf.write("\30\u00b2\3\2\2\2\32\u00b8\3\2\2\2\34\u00d2\3\2\2\2\36")
-        buf.write("\u00e3\3\2\2\2 \u00f5\3\2\2\2\"&\5\4\3\2#%\5\22\n\2$#")
-        buf.write("\3\2\2\2%(\3\2\2\2&$\3\2\2\2&\'\3\2\2\2\'\3\3\2\2\2(&")
-        buf.write("\3\2\2\2)*\7\3\2\2*+\7(\2\2+,\5\b\5\2,-\7)\2\2-\5\3\2")
-        buf.write("\2\2.\62\5\n\6\2/\62\7%\2\2\60\62\5\f\7\2\61.\3\2\2\2")
-        buf.write("\61/\3\2\2\2\61\60\3\2\2\2\62\63\3\2\2\2\639\7\r\2\2\64")
-        buf.write(":\5 \21\2\65:\7\"\2\2\66:\5\36\20\2\67:\7%\2\28:\5\24")
-        buf.write("\13\29\64\3\2\2\29\65\3\2\2\29\66\3\2\2\29\67\3\2\2\2")
-        buf.write("98\3\2\2\2:;\3\2\2\2;<\7 \2\2<\7\3\2\2\2=F\5\30\r\2>F")
-        buf.write("\5\6\4\2?F\5\n\6\2@F\5\34\17\2AB\5\24\13\2BC\7 \2\2CF")
-        buf.write("\3\2\2\2DF\5\26\f\2E=\3\2\2\2E>\3\2\2\2E?\3\2\2\2E@\3")
-        buf.write("\2\2\2EA\3\2\2\2ED\3\2\2\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2")
-        buf.write("\2H\t\3\2\2\2IG\3\2\2\2JK\5\16\b\2KL\7%\2\2LY\3\2\2\2")
-        buf.write("MN\5\16\b\2NO\7%\2\2OP\7 \2\2PY\3\2\2\2QR\5\16\b\2RS\5")
-        buf.write("\f\7\2SY\3\2\2\2TU\5\16\b\2UV\5\f\7\2VW\7 \2\2WY\3\2\2")
-        buf.write("\2XJ\3\2\2\2XM\3\2\2\2XQ\3\2\2\2XT\3\2\2\2Y\13\3\2\2\2")
-        buf.write("Z[\7%\2\2[\\\7&\2\2\\]\7!\2\2]^\7\'\2\2^\r\3\2\2\2_`\t")
-        buf.write("\2\2\2`\17\3\2\2\2ab\t\3\2\2b\21\3\2\2\2cd\5\16\b\2de")
-        buf.write("\7%\2\2ei\7*\2\2fg\5\16\b\2gh\7%\2\2hj\3\2\2\2if\3\2\2")
-        buf.write("\2ij\3\2\2\2jk\3\2\2\2kl\7+\2\2lm\7(\2\2mn\5\b\5\2no\7")
-        buf.write(")\2\2o\u0084\3\2\2\2pq\5\16\b\2qr\7%\2\2rw\7*\2\2st\5")
-        buf.write("\16\b\2tu\7%\2\2uv\7\4\2\2vx\3\2\2\2ws\3\2\2\2xy\3\2\2")
-        buf.write("\2yw\3\2\2\2yz\3\2\2\2z{\3\2\2\2{|\5\16\b\2|}\7%\2\2}")
-        buf.write("~\3\2\2\2~\177\7+\2\2\177\u0080\7(\2\2\u0080\u0081\5\b")
-        buf.write("\5\2\u0081\u0082\7)\2\2\u0082\u0084\3\2\2\2\u0083c\3\2")
-        buf.write("\2\2\u0083p\3\2\2\2\u0084\23\3\2\2\2\u0085\u0086\7%\2")
-        buf.write("\2\u0086\u0093\7*\2\2\u0087\u0089\5\32\16\2\u0088\u0087")
-        buf.write("\3\2\2\2\u0088\u0089\3\2\2\2\u0089\u0094\3\2\2\2\u008a")
-        buf.write("\u008b\5\32\16\2\u008b\u008c\7\4\2\2\u008c\u008e\3\2\2")
-        buf.write("\2\u008d\u008a\3\2\2\2\u008e\u008f\3\2\2\2\u008f\u008d")
-        buf.write("\3\2\2\2\u008f\u0090\3\2\2\2\u0090\u0091\3\2\2\2\u0091")
-        buf.write("\u0092\5\32\16\2\u0092\u0094\3\2\2\2\u0093\u0088\3\2\2")
-        buf.write("\2\u0093\u008d\3\2\2\2\u0094\u0095\3\2\2\2\u0095\u0096")
-        buf.write("\7+\2\2\u0096\25\3\2\2\2\u0097\u0099\7\30\2\2\u0098\u009a")
-        buf.write("\7*\2\2\u0099\u0098\3\2\2\2\u0099\u009a\3\2\2\2\u009a")
-        buf.write("\u00a0\3\2\2\2\u009b\u00a1\5 \21\2\u009c\u00a1\7\"\2\2")
-        buf.write("\u009d\u00a1\5\36\20\2\u009e\u00a1\7%\2\2\u009f\u00a1")
-        buf.write("\5\24\13\2\u00a0\u009b\3\2\2\2\u00a0\u009c\3\2\2\2\u00a0")
-        buf.write("\u009d\3\2\2\2\u00a0\u009e\3\2\2\2\u00a0\u009f\3\2\2\2")
-        buf.write("\u00a1\u00a3\3\2\2\2\u00a2\u00a4\7+\2\2\u00a3\u00a2\3")
-        buf.write("\2\2\2\u00a3\u00a4\3\2\2\2\u00a4\u00a5\3\2\2\2\u00a5\u00a6")
-        buf.write("\7 \2\2\u00a6\27\3\2\2\2\u00a7\u00a8\7\5\2\2\u00a8\u00a9")
-        buf.write("\7*\2\2\u00a9\u00aa\t\4\2\2\u00aa\u00ab\7+\2\2\u00ab\u00b3")
-        buf.write("\7 \2\2\u00ac\u00ad\7%\2\2\u00ad\u00ae\7\36\2\2\u00ae")
-        buf.write("\u00b3\7 \2\2\u00af\u00b0\7%\2\2\u00b0\u00b1\7\37\2\2")
-        buf.write("\u00b1\u00b3\7 \2\2\u00b2\u00a7\3\2\2\2\u00b2\u00ac\3")
-        buf.write("\2\2\2\u00b2\u00af\3\2\2\2\u00b3\31\3\2\2\2\u00b4\u00b9")
-        buf.write("\5 \21\2\u00b5\u00b9\7\"\2\2\u00b6\u00b9\5\36\20\2\u00b7")
-        buf.write("\u00b9\7%\2\2\u00b8\u00b4\3\2\2\2\u00b8\u00b5\3\2\2\2")
-        buf.write("\u00b8\u00b6\3\2\2\2\u00b8\u00b7\3\2\2\2\u00b9\33\3\2")
-        buf.write("\2\2\u00ba\u00bb\7\17\2\2\u00bb\u00bc\7*\2\2\u00bc\u00bd")
-        buf.write("\5\36\20\2\u00bd\u00be\7+\2\2\u00be\u00bf\7(\2\2\u00bf")
-        buf.write("\u00c0\5\b\5\2\u00c0\u00c8\7)\2\2\u00c1\u00c2\7\20\2\2")
-        buf.write("\u00c2\u00c9\5\34\17\2\u00c3\u00c4\7\20\2\2\u00c4\u00c5")
-        buf.write("\7(\2\2\u00c5\u00c6\5\b\5\2\u00c6\u00c7\7)\2\2\u00c7\u00c9")
-        buf.write("\3\2\2\2\u00c8\u00c1\3\2\2\2\u00c8\u00c3\3\2\2\2\u00c8")
-        buf.write("\u00c9\3\2\2\2\u00c9\u00d3\3\2\2\2\u00ca\u00cb\7\21\2")
-        buf.write("\2\u00cb\u00cc\7*\2\2\u00cc\u00cd\5\36\20\2\u00cd\u00ce")
-        buf.write("\7+\2\2\u00ce\u00cf\7(\2\2\u00cf\u00d0\5\b\5\2\u00d0\u00d1")
-        buf.write("\7)\2\2\u00d1\u00d3\3\2\2\2\u00d2\u00ba\3\2\2\2\u00d2")
-        buf.write("\u00ca\3\2\2\2\u00d3\35\3\2\2\2\u00d4\u00d5\b\20\1\2\u00d5")
-        buf.write("\u00d6\7*\2\2\u00d6\u00d7\5\36\20\2\u00d7\u00d8\7+\2\2")
-        buf.write("\u00d8\u00e4\3\2\2\2\u00d9\u00dc\5 \21\2\u00da\u00dc\7")
-        buf.write("\"\2\2\u00db\u00d9\3\2\2\2\u00db\u00da\3\2\2\2\u00dc\u00dd")
-        buf.write("\3\2\2\2\u00dd\u00e0\5\20\t\2\u00de\u00e1\5 \21\2\u00df")
-        buf.write("\u00e1\7\"\2\2\u00e0\u00de\3\2\2\2\u00e0\u00df\3\2\2\2")
-        buf.write("\u00e1\u00e4\3\2\2\2\u00e2\u00e4\7$\2\2\u00e3\u00d4\3")
-        buf.write("\2\2\2\u00e3\u00db\3\2\2\2\u00e3\u00e2\3\2\2\2\u00e4\u00ea")
-        buf.write("\3\2\2\2\u00e5\u00e6\f\6\2\2\u00e6\u00e7\t\5\2\2\u00e7")
-        buf.write("\u00e9\5\36\20\7\u00e8\u00e5\3\2\2\2\u00e9\u00ec\3\2\2")
-        buf.write("\2\u00ea\u00e8\3\2\2\2\u00ea\u00eb\3\2\2\2\u00eb\37\3")
-        buf.write("\2\2\2\u00ec\u00ea\3\2\2\2\u00ed\u00ee\b\21\1\2\u00ee")
-        buf.write("\u00f6\7!\2\2\u00ef\u00f6\7%\2\2\u00f0\u00f6\5\24\13\2")
-        buf.write("\u00f1\u00f2\7*\2\2\u00f2\u00f3\5 \21\2\u00f3\u00f4\7")
-        buf.write("+\2\2\u00f4\u00f6\3\2\2\2\u00f5\u00ed\3\2\2\2\u00f5\u00ef")
-        buf.write("\3\2\2\2\u00f5\u00f0\3\2\2\2\u00f5\u00f1\3\2\2\2\u00f6")
-        buf.write("\u00ff\3\2\2\2\u00f7\u00f8\f\b\2\2\u00f8\u00f9\t\6\2\2")
-        buf.write("\u00f9\u00fe\5 \21\t\u00fa\u00fb\f\7\2\2\u00fb\u00fc\t")
-        buf.write("\7\2\2\u00fc\u00fe\5 \21\b\u00fd\u00f7\3\2\2\2\u00fd\u00fa")
-        buf.write("\3\2\2\2\u00fe\u0101\3\2\2\2\u00ff\u00fd\3\2\2\2\u00ff")
-        buf.write("\u0100\3\2\2\2\u0100!\3\2\2\2\u0101\u00ff\3\2\2\2\34&")
-        buf.write("\619EGXiy\u0083\u0088\u008f\u0093\u0099\u00a0\u00a3\u00b2")
-        buf.write("\u00b8\u00c8\u00d2\u00db\u00e0\u00e3\u00ea\u00f5\u00fd")
-        buf.write("\u00ff")
+        buf.write("\3\20\5\20\u00db\n\20\3\20\3\20\5\20\u00df\n\20\3\20\3")
+        buf.write("\20\3\20\5\20\u00e4\n\20\3\20\5\20\u00e7\n\20\3\20\5\20")
+        buf.write("\u00ea\n\20\3\20\3\20\3\20\7\20\u00ef\n\20\f\20\16\20")
+        buf.write("\u00f2\13\20\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\5")
+        buf.write("\21\u00fc\n\21\3\21\3\21\3\21\3\21\3\21\3\21\7\21\u0104")
+        buf.write("\n\21\f\21\16\21\u0107\13\21\3\21\2\4\36 \22\2\4\6\b\n")
+        buf.write("\f\16\20\22\24\26\30\32\34\36 \2\b\3\2\7\13\5\2\f\f\16")
+        buf.write("\16\24\27\4\2\"#&&\3\2\22\23\3\2\34\36\3\2\32\33\2\u0128")
+        buf.write("\2\"\3\2\2\2\4)\3\2\2\2\6\61\3\2\2\2\bG\3\2\2\2\nX\3\2")
+        buf.write("\2\2\fZ\3\2\2\2\16_\3\2\2\2\20a\3\2\2\2\22\u0083\3\2\2")
+        buf.write("\2\24\u0085\3\2\2\2\26\u0097\3\2\2\2\30\u00b2\3\2\2\2")
+        buf.write("\32\u00b8\3\2\2\2\34\u00d2\3\2\2\2\36\u00e9\3\2\2\2 \u00fb")
+        buf.write("\3\2\2\2\"&\5\4\3\2#%\5\22\n\2$#\3\2\2\2%(\3\2\2\2&$\3")
+        buf.write("\2\2\2&\'\3\2\2\2\'\3\3\2\2\2(&\3\2\2\2)*\7\3\2\2*+\7")
+        buf.write(")\2\2+,\5\b\5\2,-\7*\2\2-\5\3\2\2\2.\62\5\n\6\2/\62\7")
+        buf.write("&\2\2\60\62\5\f\7\2\61.\3\2\2\2\61/\3\2\2\2\61\60\3\2")
+        buf.write("\2\2\62\63\3\2\2\2\639\7\r\2\2\64:\5 \21\2\65:\7#\2\2")
+        buf.write("\66:\5\36\20\2\67:\7&\2\28:\5\24\13\29\64\3\2\2\29\65")
+        buf.write("\3\2\2\29\66\3\2\2\29\67\3\2\2\298\3\2\2\2:;\3\2\2\2;")
+        buf.write("<\7!\2\2<\7\3\2\2\2=F\5\30\r\2>F\5\6\4\2?F\5\n\6\2@F\5")
+        buf.write("\34\17\2AB\5\24\13\2BC\7!\2\2CF\3\2\2\2DF\5\26\f\2E=\3")
+        buf.write("\2\2\2E>\3\2\2\2E?\3\2\2\2E@\3\2\2\2EA\3\2\2\2ED\3\2\2")
+        buf.write("\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2\2H\t\3\2\2\2IG\3\2\2\2")
+        buf.write("JK\5\16\b\2KL\7&\2\2LY\3\2\2\2MN\5\16\b\2NO\7&\2\2OP\7")
+        buf.write("!\2\2PY\3\2\2\2QR\5\16\b\2RS\5\f\7\2SY\3\2\2\2TU\5\16")
+        buf.write("\b\2UV\5\f\7\2VW\7!\2\2WY\3\2\2\2XJ\3\2\2\2XM\3\2\2\2")
+        buf.write("XQ\3\2\2\2XT\3\2\2\2Y\13\3\2\2\2Z[\7&\2\2[\\\7\'\2\2\\")
+        buf.write("]\7\"\2\2]^\7(\2\2^\r\3\2\2\2_`\t\2\2\2`\17\3\2\2\2ab")
+        buf.write("\t\3\2\2b\21\3\2\2\2cd\5\16\b\2de\7&\2\2ei\7+\2\2fg\5")
+        buf.write("\16\b\2gh\7&\2\2hj\3\2\2\2if\3\2\2\2ij\3\2\2\2jk\3\2\2")
+        buf.write("\2kl\7,\2\2lm\7)\2\2mn\5\b\5\2no\7*\2\2o\u0084\3\2\2\2")
+        buf.write("pq\5\16\b\2qr\7&\2\2rw\7+\2\2st\5\16\b\2tu\7&\2\2uv\7")
+        buf.write("\4\2\2vx\3\2\2\2ws\3\2\2\2xy\3\2\2\2yw\3\2\2\2yz\3\2\2")
+        buf.write("\2z{\3\2\2\2{|\5\16\b\2|}\7&\2\2}~\3\2\2\2~\177\7,\2\2")
+        buf.write("\177\u0080\7)\2\2\u0080\u0081\5\b\5\2\u0081\u0082\7*\2")
+        buf.write("\2\u0082\u0084\3\2\2\2\u0083c\3\2\2\2\u0083p\3\2\2\2\u0084")
+        buf.write("\23\3\2\2\2\u0085\u0086\7&\2\2\u0086\u0093\7+\2\2\u0087")
+        buf.write("\u0089\5\32\16\2\u0088\u0087\3\2\2\2\u0088\u0089\3\2\2")
+        buf.write("\2\u0089\u0094\3\2\2\2\u008a\u008b\5\32\16\2\u008b\u008c")
+        buf.write("\7\4\2\2\u008c\u008e\3\2\2\2\u008d\u008a\3\2\2\2\u008e")
+        buf.write("\u008f\3\2\2\2\u008f\u008d\3\2\2\2\u008f\u0090\3\2\2\2")
+        buf.write("\u0090\u0091\3\2\2\2\u0091\u0092\5\32\16\2\u0092\u0094")
+        buf.write("\3\2\2\2\u0093\u0088\3\2\2\2\u0093\u008d\3\2\2\2\u0094")
+        buf.write("\u0095\3\2\2\2\u0095\u0096\7,\2\2\u0096\25\3\2\2\2\u0097")
+        buf.write("\u0099\7\31\2\2\u0098\u009a\7+\2\2\u0099\u0098\3\2\2\2")
+        buf.write("\u0099\u009a\3\2\2\2\u009a\u00a0\3\2\2\2\u009b\u00a1\5")
+        buf.write(" \21\2\u009c\u00a1\7#\2\2\u009d\u00a1\5\36\20\2\u009e")
+        buf.write("\u00a1\7&\2\2\u009f\u00a1\5\24\13\2\u00a0\u009b\3\2\2")
+        buf.write("\2\u00a0\u009c\3\2\2\2\u00a0\u009d\3\2\2\2\u00a0\u009e")
+        buf.write("\3\2\2\2\u00a0\u009f\3\2\2\2\u00a1\u00a3\3\2\2\2\u00a2")
+        buf.write("\u00a4\7,\2\2\u00a3\u00a2\3\2\2\2\u00a3\u00a4\3\2\2\2")
+        buf.write("\u00a4\u00a5\3\2\2\2\u00a5\u00a6\7!\2\2\u00a6\27\3\2\2")
+        buf.write("\2\u00a7\u00a8\7\5\2\2\u00a8\u00a9\7+\2\2\u00a9\u00aa")
+        buf.write("\t\4\2\2\u00aa\u00ab\7,\2\2\u00ab\u00b3\7!\2\2\u00ac\u00ad")
+        buf.write("\7&\2\2\u00ad\u00ae\7\37\2\2\u00ae\u00b3\7!\2\2\u00af")
+        buf.write("\u00b0\7&\2\2\u00b0\u00b1\7 \2\2\u00b1\u00b3\7!\2\2\u00b2")
+        buf.write("\u00a7\3\2\2\2\u00b2\u00ac\3\2\2\2\u00b2\u00af\3\2\2\2")
+        buf.write("\u00b3\31\3\2\2\2\u00b4\u00b9\5 \21\2\u00b5\u00b9\7#\2")
+        buf.write("\2\u00b6\u00b9\5\36\20\2\u00b7\u00b9\7&\2\2\u00b8\u00b4")
+        buf.write("\3\2\2\2\u00b8\u00b5\3\2\2\2\u00b8\u00b6\3\2\2\2\u00b8")
+        buf.write("\u00b7\3\2\2\2\u00b9\33\3\2\2\2\u00ba\u00bb\7\17\2\2\u00bb")
+        buf.write("\u00bc\7+\2\2\u00bc\u00bd\5\36\20\2\u00bd\u00be\7,\2\2")
+        buf.write("\u00be\u00bf\7)\2\2\u00bf\u00c0\5\b\5\2\u00c0\u00c8\7")
+        buf.write("*\2\2\u00c1\u00c2\7\20\2\2\u00c2\u00c9\5\34\17\2\u00c3")
+        buf.write("\u00c4\7\20\2\2\u00c4\u00c5\7)\2\2\u00c5\u00c6\5\b\5\2")
+        buf.write("\u00c6\u00c7\7*\2\2\u00c7\u00c9\3\2\2\2\u00c8\u00c1\3")
+        buf.write("\2\2\2\u00c8\u00c3\3\2\2\2\u00c8\u00c9\3\2\2\2\u00c9\u00d3")
+        buf.write("\3\2\2\2\u00ca\u00cb\7\21\2\2\u00cb\u00cc\7+\2\2\u00cc")
+        buf.write("\u00cd\5\36\20\2\u00cd\u00ce\7,\2\2\u00ce\u00cf\7)\2\2")
+        buf.write("\u00cf\u00d0\5\b\5\2\u00d0\u00d1\7*\2\2\u00d1\u00d3\3")
+        buf.write("\2\2\2\u00d2\u00ba\3\2\2\2\u00d2\u00ca\3\2\2\2\u00d3\35")
+        buf.write("\3\2\2\2\u00d4\u00d5\b\20\1\2\u00d5\u00d6\7+\2\2\u00d6")
+        buf.write("\u00d7\5\36\20\2\u00d7\u00d8\7,\2\2\u00d8\u00ea\3\2\2")
+        buf.write("\2\u00d9\u00db\7\30\2\2\u00da\u00d9\3\2\2\2\u00da\u00db")
+        buf.write("\3\2\2\2\u00db\u00de\3\2\2\2\u00dc\u00df\5 \21\2\u00dd")
+        buf.write("\u00df\7#\2\2\u00de\u00dc\3\2\2\2\u00de\u00dd\3\2\2\2")
+        buf.write("\u00df\u00e0\3\2\2\2\u00e0\u00e3\5\20\t\2\u00e1\u00e4")
+        buf.write("\5 \21\2\u00e2\u00e4\7#\2\2\u00e3\u00e1\3\2\2\2\u00e3")
+        buf.write("\u00e2\3\2\2\2\u00e4\u00ea\3\2\2\2\u00e5\u00e7\7\30\2")
+        buf.write("\2\u00e6\u00e5\3\2\2\2\u00e6\u00e7\3\2\2\2\u00e7\u00e8")
+        buf.write("\3\2\2\2\u00e8\u00ea\7%\2\2\u00e9\u00d4\3\2\2\2\u00e9")
+        buf.write("\u00da\3\2\2\2\u00e9\u00e6\3\2\2\2\u00ea\u00f0\3\2\2\2")
+        buf.write("\u00eb\u00ec\f\6\2\2\u00ec\u00ed\t\5\2\2\u00ed\u00ef\5")
+        buf.write("\36\20\7\u00ee\u00eb\3\2\2\2\u00ef\u00f2\3\2\2\2\u00f0")
+        buf.write("\u00ee\3\2\2\2\u00f0\u00f1\3\2\2\2\u00f1\37\3\2\2\2\u00f2")
+        buf.write("\u00f0\3\2\2\2\u00f3\u00f4\b\21\1\2\u00f4\u00fc\7\"\2")
+        buf.write("\2\u00f5\u00fc\7&\2\2\u00f6\u00fc\5\24\13\2\u00f7\u00f8")
+        buf.write("\7+\2\2\u00f8\u00f9\5 \21\2\u00f9\u00fa\7,\2\2\u00fa\u00fc")
+        buf.write("\3\2\2\2\u00fb\u00f3\3\2\2\2\u00fb\u00f5\3\2\2\2\u00fb")
+        buf.write("\u00f6\3\2\2\2\u00fb\u00f7\3\2\2\2\u00fc\u0105\3\2\2\2")
+        buf.write("\u00fd\u00fe\f\b\2\2\u00fe\u00ff\t\6\2\2\u00ff\u0104\5")
+        buf.write(" \21\t\u0100\u0101\f\7\2\2\u0101\u0102\t\7\2\2\u0102\u0104")
+        buf.write("\5 \21\b\u0103\u00fd\3\2\2\2\u0103\u0100\3\2\2\2\u0104")
+        buf.write("\u0107\3\2\2\2\u0105\u0103\3\2\2\2\u0105\u0106\3\2\2\2")
+        buf.write("\u0106!\3\2\2\2\u0107\u0105\3\2\2\2\36&\619EGXiy\u0083")
+        buf.write("\u0088\u008f\u0093\u0099\u00a0\u00a3\u00b2\u00b8\u00c8")
+        buf.write("\u00d2\u00da\u00de\u00e3\u00e6\u00e9\u00f0\u00fb\u0103")
+        buf.write("\u0105")
         return buf.getvalue()
 
 
@@ -143,20 +147,20 @@ class ccedilhaParser ( Parser ):
                      "'talvez '", "'letra '", "' diferente '", "' igual '", 
                      "' igualIgual '", "'se'", "'senao'", "'enquanto'", 
                      "' e '", "' ou '", "' maiorIgual '", "' menorIgual '", 
-                     "' maior '", "' menor '", "'volte '", "' mais '", "' menos '", 
-                     "' vezes '", "' divide '", "' resto '", "' maisMais'", 
-                     "' menosMenos'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "'['", "']'", 
-                     "'{'", "'}'", "'('", "')'" ]
+                     "' maior '", "' menor '", "'nao '", "'volte '", "' mais '", 
+                     "' menos '", "' vezes '", "' divide '", "' resto '", 
+                     "' maisMais'", "' menosMenos'", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "'['", "']'", "'{'", "'}'", "'('", "')'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "WS", "DEINT", "DESTRING", "DEFLOAT", "DEBOOL", "DECHAR", 
                       "NOT_EQUAL", "EQUAL", "EQUAL_EQUAL", "IF", "ELSE", 
                       "WHILE", "AND", "OR", "GREATER_EQUAL", "LESSER_EQUAL", 
-                      "GREATER", "LESSER", "RETURN", "PLUS", "MINUS", "MULT", 
-                      "DIV", "REST", "PLUS_PLUS", "MINUS_MINUS", "ENDLINE", 
-                      "INT", "STRING", "FLOAT", "BOOL", "ID", "LBOX", "RBOX", 
-                      "LKEY", "RKEY", "LPAREN", "RPAREN" ]
+                      "GREATER", "LESSER", "NOT", "RETURN", "PLUS", "MINUS", 
+                      "MULT", "DIV", "REST", "PLUS_PLUS", "MINUS_MINUS", 
+                      "ENDLINE", "INT", "STRING", "FLOAT", "BOOL", "ID", 
+                      "LBOX", "RBOX", "LKEY", "RKEY", "LPAREN", "RPAREN" ]
 
     RULE_prog = 0
     RULE_main = 1
@@ -201,26 +205,27 @@ class ccedilhaParser ( Parser ):
     LESSER_EQUAL=19
     GREATER=20
     LESSER=21
-    RETURN=22
-    PLUS=23
-    MINUS=24
-    MULT=25
-    DIV=26
-    REST=27
-    PLUS_PLUS=28
-    MINUS_MINUS=29
-    ENDLINE=30
-    INT=31
-    STRING=32
-    FLOAT=33
-    BOOL=34
-    ID=35
-    LBOX=36
-    RBOX=37
-    LKEY=38
-    RKEY=39
-    LPAREN=40
-    RPAREN=41
+    NOT=22
+    RETURN=23
+    PLUS=24
+    MINUS=25
+    MULT=26
+    DIV=27
+    REST=28
+    PLUS_PLUS=29
+    MINUS_MINUS=30
+    ENDLINE=31
+    INT=32
+    STRING=33
+    FLOAT=34
+    BOOL=35
+    ID=36
+    LBOX=37
+    RBOX=38
+    LKEY=39
+    RKEY=40
+    LPAREN=41
+    RPAREN=42
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -1115,7 +1120,7 @@ class ccedilhaParser ( Parser ):
                 self.state = 134
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ccedilhaParser.INT) | (1 << ccedilhaParser.STRING) | (1 << ccedilhaParser.BOOL) | (1 << ccedilhaParser.ID) | (1 << ccedilhaParser.LPAREN))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ccedilhaParser.NOT) | (1 << ccedilhaParser.INT) | (1 << ccedilhaParser.STRING) | (1 << ccedilhaParser.BOOL) | (1 << ccedilhaParser.ID) | (1 << ccedilhaParser.LPAREN))) != 0):
                     self.state = 133
                     self.args()
 
@@ -1722,6 +1727,8 @@ class ccedilhaParser ( Parser ):
 
         def BOOL(self):
             return self.getToken(ccedilhaParser.BOOL, 0)
+        def NOT(self):
+            return self.getToken(ccedilhaParser.NOT, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBool" ):
@@ -1758,6 +1765,8 @@ class ccedilhaParser ( Parser ):
                 return self.getTokens(ccedilhaParser.STRING)
             else:
                 return self.getToken(ccedilhaParser.STRING, i)
+        def NOT(self):
+            return self.getToken(ccedilhaParser.NOT, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpr_boolLogic" ):
@@ -1817,9 +1826,9 @@ class ccedilhaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 225
+            self.state = 231
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
             if la_ == 1:
                 localctx = ccedilhaParser.Expr_boolParenContext(self, localctx)
                 self._ctx = localctx
@@ -1837,31 +1846,39 @@ class ccedilhaParser ( Parser ):
                 localctx = ccedilhaParser.Expr_boolLogicContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 217
+                self.state = 216
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==ccedilhaParser.NOT:
+                    self.state = 215
+                    self.match(ccedilhaParser.NOT)
+
+
+                self.state = 220
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [ccedilhaParser.INT, ccedilhaParser.ID, ccedilhaParser.LPAREN]:
-                    self.state = 215
+                    self.state = 218
                     self.expr(0)
                     pass
                 elif token in [ccedilhaParser.STRING]:
-                    self.state = 216
+                    self.state = 219
                     self.match(ccedilhaParser.STRING)
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 219
-                self.basic_logic()
                 self.state = 222
+                self.basic_logic()
+                self.state = 225
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [ccedilhaParser.INT, ccedilhaParser.ID, ccedilhaParser.LPAREN]:
-                    self.state = 220
+                    self.state = 223
                     self.expr(0)
                     pass
                 elif token in [ccedilhaParser.STRING]:
-                    self.state = 221
+                    self.state = 224
                     self.match(ccedilhaParser.STRING)
                     pass
                 else:
@@ -1873,15 +1890,23 @@ class ccedilhaParser ( Parser ):
                 localctx = ccedilhaParser.BoolContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 224
+                self.state = 228
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==ccedilhaParser.NOT:
+                    self.state = 227
+                    self.match(ccedilhaParser.NOT)
+
+
+                self.state = 230
                 self.match(ccedilhaParser.BOOL)
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 232
+            self.state = 238
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -1889,22 +1914,22 @@ class ccedilhaParser ( Parser ):
                     _prevctx = localctx
                     localctx = ccedilhaParser.Expr_boolAndOrContext(self, ccedilhaParser.Expr_boolContext(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_bool)
-                    self.state = 227
+                    self.state = 233
                     if not self.precpred(self._ctx, 4):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                    self.state = 228
+                    self.state = 234
                     _la = self._input.LA(1)
                     if not(_la==ccedilhaParser.AND or _la==ccedilhaParser.OR):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 229
+                    self.state = 235
                     self.expr_bool(5) 
-                self.state = 234
+                self.state = 240
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1947,6 +1972,8 @@ class ccedilhaParser ( Parser ):
             return self.getToken(ccedilhaParser.MULT, 0)
         def DIV(self):
             return self.getToken(ccedilhaParser.DIV, 0)
+        def REST(self):
+            return self.getToken(ccedilhaParser.REST, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExprMultDiv" ):
@@ -2108,15 +2135,15 @@ class ccedilhaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 243
+            self.state = 249
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
             if la_ == 1:
                 localctx = ccedilhaParser.NumberContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 236
+                self.state = 242
                 self.match(ccedilhaParser.INT)
                 pass
 
@@ -2124,7 +2151,7 @@ class ccedilhaParser ( Parser ):
                 localctx = ccedilhaParser.IdContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 237
+                self.state = 243
                 self.match(ccedilhaParser.ID)
                 pass
 
@@ -2132,7 +2159,7 @@ class ccedilhaParser ( Parser ):
                 localctx = ccedilhaParser.ExprFuncCallContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 238
+                self.state = 244
                 self.func_call()
                 pass
 
@@ -2140,67 +2167,67 @@ class ccedilhaParser ( Parser ):
                 localctx = ccedilhaParser.ExprParenContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 239
+                self.state = 245
                 self.match(ccedilhaParser.LPAREN)
-                self.state = 240
+                self.state = 246
                 self.expr(0)
-                self.state = 241
+                self.state = 247
                 self.match(ccedilhaParser.RPAREN)
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 253
+            self.state = 259
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 251
+                    self.state = 257
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
                     if la_ == 1:
                         localctx = ccedilhaParser.ExprMultDivContext(self, ccedilhaParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 245
+                        self.state = 251
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
-                        self.state = 246
+                        self.state = 252
                         _la = self._input.LA(1)
-                        if not(_la==ccedilhaParser.MULT or _la==ccedilhaParser.DIV):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ccedilhaParser.MULT) | (1 << ccedilhaParser.DIV) | (1 << ccedilhaParser.REST))) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 247
+                        self.state = 253
                         self.expr(7)
                         pass
 
                     elif la_ == 2:
                         localctx = ccedilhaParser.ExprPlusMinusContext(self, ccedilhaParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 248
+                        self.state = 254
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 249
+                        self.state = 255
                         _la = self._input.LA(1)
                         if not(_la==ccedilhaParser.PLUS or _la==ccedilhaParser.MINUS):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 250
+                        self.state = 256
                         self.expr(6)
                         pass
 
              
-                self.state = 255
+                self.state = 261
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
