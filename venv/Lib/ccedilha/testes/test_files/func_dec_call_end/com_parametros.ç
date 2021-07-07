@@ -1,0 +1,8 @@
+nada principal(){
+    inteiro a igual 1ç
+    a igual teste(10, 30)ç
+}
+
+inteiro teste(inteiro x, inteiro y){
+    volte x mais yç
+}

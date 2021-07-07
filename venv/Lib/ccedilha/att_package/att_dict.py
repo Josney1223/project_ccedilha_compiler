@@ -1,4 +1,4 @@
-from att_package import att
+from .att import Att
 
 
 class AttDict:
@@ -7,7 +7,7 @@ class AttDict:
 
     def insert(self, att_name: str, value, t: type, isList: bool, size: int):
         if not self.check_exist(att_name, "wildcard"):
-            self.dictionary[att_name] = att.Att(value, t, isList, size)        
+            self.dictionary[att_name] = Att(value, t, isList, size)
 
     def getValue(self, att_name, t: type):
         if self.check_exist(att_name, t):

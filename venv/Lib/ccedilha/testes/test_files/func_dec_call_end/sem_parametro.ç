@@ -1,0 +1,8 @@
+nada principal(){
+    inteiro a igual 1ç
+    a igual teste()ç
+}
+
+inteiro teste(){
+    volte 10ç
+}
