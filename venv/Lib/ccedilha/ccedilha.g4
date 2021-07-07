@@ -1,4 +1,4 @@
-// Define a grammar called Hello
+// Define a grammar called ccedilha
 grammar ccedilha;
 import ccedilhaTokens;
 
@@ -62,5 +62,3 @@ expr: expr ( MULT | DIV | REST ) expr #exprMultDiv
     | func_call #exprFuncCall
     | LPAREN expr RPAREN #exprParen
     ;
-
-WS : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines

@@ -28,7 +28,7 @@ RETURN: 'volte ';
 PLUS: ' mais ';
 MINUS: ' menos ';
 MULT: ' vezes ';
-DIV: ' divide ';
+DIV: ' dividido ';
 REST: ' resto ';
 PLUS_PLUS: ' maisMais';
 MINUS_MINUS: ' menosMenos';

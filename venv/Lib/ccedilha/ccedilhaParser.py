@@ -1,4 +1,4 @@
-# Generated from ccedilha.g4 by ANTLR 4.9.2
+# Generated from d:\Projetos\project_ccedilha_compiler\venv\Lib\ccedilha\ccedilha.g4 by ANTLR 4.8
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -37,88 +37,88 @@ def serializedATN():
         buf.write("\u00f2\13\20\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\5")
         buf.write("\21\u00fc\n\21\3\21\3\21\3\21\3\21\3\21\3\21\7\21\u0104")
         buf.write("\n\21\f\21\16\21\u0107\13\21\3\21\2\4\36 \22\2\4\6\b\n")
-        buf.write("\f\16\20\22\24\26\30\32\34\36 \2\b\3\2\7\13\5\2\f\f\16")
-        buf.write("\16\24\27\4\2\"#&&\3\2\22\23\3\2\34\36\3\2\32\33\2\u0128")
+        buf.write("\f\16\20\22\24\26\30\32\34\36 \2\b\3\2\6\n\5\2\13\13\r")
+        buf.write("\r\23\26\4\2!\"%%\3\2\21\22\3\2\33\35\3\2\31\32\2\u0128")
         buf.write("\2\"\3\2\2\2\4)\3\2\2\2\6\61\3\2\2\2\bG\3\2\2\2\nX\3\2")
         buf.write("\2\2\fZ\3\2\2\2\16_\3\2\2\2\20a\3\2\2\2\22\u0083\3\2\2")
         buf.write("\2\24\u0085\3\2\2\2\26\u0097\3\2\2\2\30\u00b2\3\2\2\2")
         buf.write("\32\u00b8\3\2\2\2\34\u00d2\3\2\2\2\36\u00e9\3\2\2\2 \u00fb")
         buf.write("\3\2\2\2\"&\5\4\3\2#%\5\22\n\2$#\3\2\2\2%(\3\2\2\2&$\3")
         buf.write("\2\2\2&\'\3\2\2\2\'\3\3\2\2\2(&\3\2\2\2)*\7\3\2\2*+\7")
-        buf.write(")\2\2+,\5\b\5\2,-\7*\2\2-\5\3\2\2\2.\62\5\n\6\2/\62\7")
-        buf.write("&\2\2\60\62\5\f\7\2\61.\3\2\2\2\61/\3\2\2\2\61\60\3\2")
-        buf.write("\2\2\62\63\3\2\2\2\639\7\r\2\2\64:\5 \21\2\65:\7#\2\2")
-        buf.write("\66:\5\36\20\2\67:\7&\2\28:\5\24\13\29\64\3\2\2\29\65")
+        buf.write("(\2\2+,\5\b\5\2,-\7)\2\2-\5\3\2\2\2.\62\5\n\6\2/\62\7")
+        buf.write("%\2\2\60\62\5\f\7\2\61.\3\2\2\2\61/\3\2\2\2\61\60\3\2")
+        buf.write("\2\2\62\63\3\2\2\2\639\7\f\2\2\64:\5 \21\2\65:\7\"\2\2")
+        buf.write("\66:\5\36\20\2\67:\7%\2\28:\5\24\13\29\64\3\2\2\29\65")
         buf.write("\3\2\2\29\66\3\2\2\29\67\3\2\2\298\3\2\2\2:;\3\2\2\2;")
-        buf.write("<\7!\2\2<\7\3\2\2\2=F\5\30\r\2>F\5\6\4\2?F\5\n\6\2@F\5")
-        buf.write("\34\17\2AB\5\24\13\2BC\7!\2\2CF\3\2\2\2DF\5\26\f\2E=\3")
+        buf.write("<\7 \2\2<\7\3\2\2\2=F\5\30\r\2>F\5\6\4\2?F\5\n\6\2@F\5")
+        buf.write("\34\17\2AB\5\24\13\2BC\7 \2\2CF\3\2\2\2DF\5\26\f\2E=\3")
         buf.write("\2\2\2E>\3\2\2\2E?\3\2\2\2E@\3\2\2\2EA\3\2\2\2ED\3\2\2")
         buf.write("\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2\2H\t\3\2\2\2IG\3\2\2\2")
-        buf.write("JK\5\16\b\2KL\7&\2\2LY\3\2\2\2MN\5\16\b\2NO\7&\2\2OP\7")
-        buf.write("!\2\2PY\3\2\2\2QR\5\16\b\2RS\5\f\7\2SY\3\2\2\2TU\5\16")
-        buf.write("\b\2UV\5\f\7\2VW\7!\2\2WY\3\2\2\2XJ\3\2\2\2XM\3\2\2\2")
-        buf.write("XQ\3\2\2\2XT\3\2\2\2Y\13\3\2\2\2Z[\7&\2\2[\\\7\'\2\2\\")
-        buf.write("]\7\"\2\2]^\7(\2\2^\r\3\2\2\2_`\t\2\2\2`\17\3\2\2\2ab")
-        buf.write("\t\3\2\2b\21\3\2\2\2cd\5\16\b\2de\7&\2\2ei\7+\2\2fg\5")
-        buf.write("\16\b\2gh\7&\2\2hj\3\2\2\2if\3\2\2\2ij\3\2\2\2jk\3\2\2")
-        buf.write("\2kl\7,\2\2lm\7)\2\2mn\5\b\5\2no\7*\2\2o\u0084\3\2\2\2")
-        buf.write("pq\5\16\b\2qr\7&\2\2rw\7+\2\2st\5\16\b\2tu\7&\2\2uv\7")
+        buf.write("JK\5\16\b\2KL\7%\2\2LY\3\2\2\2MN\5\16\b\2NO\7%\2\2OP\7")
+        buf.write(" \2\2PY\3\2\2\2QR\5\16\b\2RS\5\f\7\2SY\3\2\2\2TU\5\16")
+        buf.write("\b\2UV\5\f\7\2VW\7 \2\2WY\3\2\2\2XJ\3\2\2\2XM\3\2\2\2")
+        buf.write("XQ\3\2\2\2XT\3\2\2\2Y\13\3\2\2\2Z[\7%\2\2[\\\7&\2\2\\")
+        buf.write("]\7!\2\2]^\7\'\2\2^\r\3\2\2\2_`\t\2\2\2`\17\3\2\2\2ab")
+        buf.write("\t\3\2\2b\21\3\2\2\2cd\5\16\b\2de\7%\2\2ei\7*\2\2fg\5")
+        buf.write("\16\b\2gh\7%\2\2hj\3\2\2\2if\3\2\2\2ij\3\2\2\2jk\3\2\2")
+        buf.write("\2kl\7+\2\2lm\7(\2\2mn\5\b\5\2no\7)\2\2o\u0084\3\2\2\2")
+        buf.write("pq\5\16\b\2qr\7%\2\2rw\7*\2\2st\5\16\b\2tu\7%\2\2uv\7")
         buf.write("\4\2\2vx\3\2\2\2ws\3\2\2\2xy\3\2\2\2yw\3\2\2\2yz\3\2\2")
-        buf.write("\2z{\3\2\2\2{|\5\16\b\2|}\7&\2\2}~\3\2\2\2~\177\7,\2\2")
-        buf.write("\177\u0080\7)\2\2\u0080\u0081\5\b\5\2\u0081\u0082\7*\2")
+        buf.write("\2z{\3\2\2\2{|\5\16\b\2|}\7%\2\2}~\3\2\2\2~\177\7+\2\2")
+        buf.write("\177\u0080\7(\2\2\u0080\u0081\5\b\5\2\u0081\u0082\7)\2")
         buf.write("\2\u0082\u0084\3\2\2\2\u0083c\3\2\2\2\u0083p\3\2\2\2\u0084")
-        buf.write("\23\3\2\2\2\u0085\u0086\7&\2\2\u0086\u0093\7+\2\2\u0087")
+        buf.write("\23\3\2\2\2\u0085\u0086\7%\2\2\u0086\u0093\7*\2\2\u0087")
         buf.write("\u0089\5\32\16\2\u0088\u0087\3\2\2\2\u0088\u0089\3\2\2")
         buf.write("\2\u0089\u0094\3\2\2\2\u008a\u008b\5\32\16\2\u008b\u008c")
         buf.write("\7\4\2\2\u008c\u008e\3\2\2\2\u008d\u008a\3\2\2\2\u008e")
         buf.write("\u008f\3\2\2\2\u008f\u008d\3\2\2\2\u008f\u0090\3\2\2\2")
         buf.write("\u0090\u0091\3\2\2\2\u0091\u0092\5\32\16\2\u0092\u0094")
         buf.write("\3\2\2\2\u0093\u0088\3\2\2\2\u0093\u008d\3\2\2\2\u0094")
-        buf.write("\u0095\3\2\2\2\u0095\u0096\7,\2\2\u0096\25\3\2\2\2\u0097")
-        buf.write("\u0099\7\31\2\2\u0098\u009a\7+\2\2\u0099\u0098\3\2\2\2")
+        buf.write("\u0095\3\2\2\2\u0095\u0096\7+\2\2\u0096\25\3\2\2\2\u0097")
+        buf.write("\u0099\7\30\2\2\u0098\u009a\7*\2\2\u0099\u0098\3\2\2\2")
         buf.write("\u0099\u009a\3\2\2\2\u009a\u00a0\3\2\2\2\u009b\u00a1\5")
-        buf.write(" \21\2\u009c\u00a1\7#\2\2\u009d\u00a1\5\36\20\2\u009e")
-        buf.write("\u00a1\7&\2\2\u009f\u00a1\5\24\13\2\u00a0\u009b\3\2\2")
+        buf.write(" \21\2\u009c\u00a1\7\"\2\2\u009d\u00a1\5\36\20\2\u009e")
+        buf.write("\u00a1\7%\2\2\u009f\u00a1\5\24\13\2\u00a0\u009b\3\2\2")
         buf.write("\2\u00a0\u009c\3\2\2\2\u00a0\u009d\3\2\2\2\u00a0\u009e")
         buf.write("\3\2\2\2\u00a0\u009f\3\2\2\2\u00a1\u00a3\3\2\2\2\u00a2")
-        buf.write("\u00a4\7,\2\2\u00a3\u00a2\3\2\2\2\u00a3\u00a4\3\2\2\2")
-        buf.write("\u00a4\u00a5\3\2\2\2\u00a5\u00a6\7!\2\2\u00a6\27\3\2\2")
-        buf.write("\2\u00a7\u00a8\7\5\2\2\u00a8\u00a9\7+\2\2\u00a9\u00aa")
-        buf.write("\t\4\2\2\u00aa\u00ab\7,\2\2\u00ab\u00b3\7!\2\2\u00ac\u00ad")
-        buf.write("\7&\2\2\u00ad\u00ae\7\37\2\2\u00ae\u00b3\7!\2\2\u00af")
-        buf.write("\u00b0\7&\2\2\u00b0\u00b1\7 \2\2\u00b1\u00b3\7!\2\2\u00b2")
-        buf.write("\u00a7\3\2\2\2\u00b2\u00ac\3\2\2\2\u00b2\u00af\3\2\2\2")
-        buf.write("\u00b3\31\3\2\2\2\u00b4\u00b9\5 \21\2\u00b5\u00b9\7#\2")
-        buf.write("\2\u00b6\u00b9\5\36\20\2\u00b7\u00b9\7&\2\2\u00b8\u00b4")
-        buf.write("\3\2\2\2\u00b8\u00b5\3\2\2\2\u00b8\u00b6\3\2\2\2\u00b8")
-        buf.write("\u00b7\3\2\2\2\u00b9\33\3\2\2\2\u00ba\u00bb\7\17\2\2\u00bb")
-        buf.write("\u00bc\7+\2\2\u00bc\u00bd\5\36\20\2\u00bd\u00be\7,\2\2")
-        buf.write("\u00be\u00bf\7)\2\2\u00bf\u00c0\5\b\5\2\u00c0\u00c8\7")
-        buf.write("*\2\2\u00c1\u00c2\7\20\2\2\u00c2\u00c9\5\34\17\2\u00c3")
-        buf.write("\u00c4\7\20\2\2\u00c4\u00c5\7)\2\2\u00c5\u00c6\5\b\5\2")
-        buf.write("\u00c6\u00c7\7*\2\2\u00c7\u00c9\3\2\2\2\u00c8\u00c1\3")
+        buf.write("\u00a4\7+\2\2\u00a3\u00a2\3\2\2\2\u00a3\u00a4\3\2\2\2")
+        buf.write("\u00a4\u00a5\3\2\2\2\u00a5\u00a6\7 \2\2\u00a6\27\3\2\2")
+        buf.write("\2\u00a7\u00a8\7\5\2\2\u00a8\u00a9\7*\2\2\u00a9\u00aa")
+        buf.write("\t\4\2\2\u00aa\u00ab\7+\2\2\u00ab\u00b3\7 \2\2\u00ac\u00ad")
+        buf.write("\7%\2\2\u00ad\u00ae\7\36\2\2\u00ae\u00b3\7 \2\2\u00af")
+        buf.write("\u00b0\7%\2\2\u00b0\u00b1\7\37\2\2\u00b1\u00b3\7 \2\2")
+        buf.write("\u00b2\u00a7\3\2\2\2\u00b2\u00ac\3\2\2\2\u00b2\u00af\3")
+        buf.write("\2\2\2\u00b3\31\3\2\2\2\u00b4\u00b9\5 \21\2\u00b5\u00b9")
+        buf.write("\7\"\2\2\u00b6\u00b9\5\36\20\2\u00b7\u00b9\7%\2\2\u00b8")
+        buf.write("\u00b4\3\2\2\2\u00b8\u00b5\3\2\2\2\u00b8\u00b6\3\2\2\2")
+        buf.write("\u00b8\u00b7\3\2\2\2\u00b9\33\3\2\2\2\u00ba\u00bb\7\16")
+        buf.write("\2\2\u00bb\u00bc\7*\2\2\u00bc\u00bd\5\36\20\2\u00bd\u00be")
+        buf.write("\7+\2\2\u00be\u00bf\7(\2\2\u00bf\u00c0\5\b\5\2\u00c0\u00c8")
+        buf.write("\7)\2\2\u00c1\u00c2\7\17\2\2\u00c2\u00c9\5\34\17\2\u00c3")
+        buf.write("\u00c4\7\17\2\2\u00c4\u00c5\7(\2\2\u00c5\u00c6\5\b\5\2")
+        buf.write("\u00c6\u00c7\7)\2\2\u00c7\u00c9\3\2\2\2\u00c8\u00c1\3")
         buf.write("\2\2\2\u00c8\u00c3\3\2\2\2\u00c8\u00c9\3\2\2\2\u00c9\u00d3")
-        buf.write("\3\2\2\2\u00ca\u00cb\7\21\2\2\u00cb\u00cc\7+\2\2\u00cc")
-        buf.write("\u00cd\5\36\20\2\u00cd\u00ce\7,\2\2\u00ce\u00cf\7)\2\2")
-        buf.write("\u00cf\u00d0\5\b\5\2\u00d0\u00d1\7*\2\2\u00d1\u00d3\3")
+        buf.write("\3\2\2\2\u00ca\u00cb\7\20\2\2\u00cb\u00cc\7*\2\2\u00cc")
+        buf.write("\u00cd\5\36\20\2\u00cd\u00ce\7+\2\2\u00ce\u00cf\7(\2\2")
+        buf.write("\u00cf\u00d0\5\b\5\2\u00d0\u00d1\7)\2\2\u00d1\u00d3\3")
         buf.write("\2\2\2\u00d2\u00ba\3\2\2\2\u00d2\u00ca\3\2\2\2\u00d3\35")
-        buf.write("\3\2\2\2\u00d4\u00d5\b\20\1\2\u00d5\u00d6\7+\2\2\u00d6")
-        buf.write("\u00d7\5\36\20\2\u00d7\u00d8\7,\2\2\u00d8\u00ea\3\2\2")
-        buf.write("\2\u00d9\u00db\7\30\2\2\u00da\u00d9\3\2\2\2\u00da\u00db")
+        buf.write("\3\2\2\2\u00d4\u00d5\b\20\1\2\u00d5\u00d6\7*\2\2\u00d6")
+        buf.write("\u00d7\5\36\20\2\u00d7\u00d8\7+\2\2\u00d8\u00ea\3\2\2")
+        buf.write("\2\u00d9\u00db\7\27\2\2\u00da\u00d9\3\2\2\2\u00da\u00db")
         buf.write("\3\2\2\2\u00db\u00de\3\2\2\2\u00dc\u00df\5 \21\2\u00dd")
-        buf.write("\u00df\7#\2\2\u00de\u00dc\3\2\2\2\u00de\u00dd\3\2\2\2")
+        buf.write("\u00df\7\"\2\2\u00de\u00dc\3\2\2\2\u00de\u00dd\3\2\2\2")
         buf.write("\u00df\u00e0\3\2\2\2\u00e0\u00e3\5\20\t\2\u00e1\u00e4")
-        buf.write("\5 \21\2\u00e2\u00e4\7#\2\2\u00e3\u00e1\3\2\2\2\u00e3")
-        buf.write("\u00e2\3\2\2\2\u00e4\u00ea\3\2\2\2\u00e5\u00e7\7\30\2")
+        buf.write("\5 \21\2\u00e2\u00e4\7\"\2\2\u00e3\u00e1\3\2\2\2\u00e3")
+        buf.write("\u00e2\3\2\2\2\u00e4\u00ea\3\2\2\2\u00e5\u00e7\7\27\2")
         buf.write("\2\u00e6\u00e5\3\2\2\2\u00e6\u00e7\3\2\2\2\u00e7\u00e8")
-        buf.write("\3\2\2\2\u00e8\u00ea\7%\2\2\u00e9\u00d4\3\2\2\2\u00e9")
+        buf.write("\3\2\2\2\u00e8\u00ea\7$\2\2\u00e9\u00d4\3\2\2\2\u00e9")
         buf.write("\u00da\3\2\2\2\u00e9\u00e6\3\2\2\2\u00ea\u00f0\3\2\2\2")
         buf.write("\u00eb\u00ec\f\6\2\2\u00ec\u00ed\t\5\2\2\u00ed\u00ef\5")
         buf.write("\36\20\7\u00ee\u00eb\3\2\2\2\u00ef\u00f2\3\2\2\2\u00f0")
         buf.write("\u00ee\3\2\2\2\u00f0\u00f1\3\2\2\2\u00f1\37\3\2\2\2\u00f2")
-        buf.write("\u00f0\3\2\2\2\u00f3\u00f4\b\21\1\2\u00f4\u00fc\7\"\2")
-        buf.write("\2\u00f5\u00fc\7&\2\2\u00f6\u00fc\5\24\13\2\u00f7\u00f8")
-        buf.write("\7+\2\2\u00f8\u00f9\5 \21\2\u00f9\u00fa\7,\2\2\u00fa\u00fc")
+        buf.write("\u00f0\3\2\2\2\u00f3\u00f4\b\21\1\2\u00f4\u00fc\7!\2\2")
+        buf.write("\u00f5\u00fc\7%\2\2\u00f6\u00fc\5\24\13\2\u00f7\u00f8")
+        buf.write("\7*\2\2\u00f8\u00f9\5 \21\2\u00f9\u00fa\7+\2\2\u00fa\u00fc")
         buf.write("\3\2\2\2\u00fb\u00f3\3\2\2\2\u00fb\u00f5\3\2\2\2\u00fb")
         buf.write("\u00f6\3\2\2\2\u00fb\u00f7\3\2\2\2\u00fc\u0105\3\2\2\2")
         buf.write("\u00fd\u00fe\f\b\2\2\u00fe\u00ff\t\6\2\2\u00ff\u0104\5")
@@ -143,24 +143,25 @@ class ccedilhaParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'nada principal()'", "','", "'amostrar'", 
-                     "<INVALID>", "'inteiro '", "'sentenca '", "'flutuante '", 
-                     "'talvez '", "'letra '", "' diferente '", "' igual '", 
-                     "' igualIgual '", "'se'", "'senao'", "'enquanto'", 
-                     "' e '", "' ou '", "' maiorIgual '", "' menorIgual '", 
-                     "' maior '", "' menor '", "'nao '", "'volte '", "' mais '", 
-                     "' menos '", "' vezes '", "' divide '", "' resto '", 
-                     "' maisMais'", "' menosMenos'", "<INVALID>", "<INVALID>", 
+                     "'inteiro '", "'sentenca '", "'flutuante '", "'talvez '", 
+                     "'letra '", "' diferente '", "' igual '", "' igualIgual '", 
+                     "'se'", "'senao'", "'enquanto'", "' e '", "' ou '", 
+                     "' maiorIgual '", "' menorIgual '", "' maior '", "' menor '", 
+                     "'nao '", "'volte '", "' mais '", "' menos '", "' vezes '", 
+                     "' dividido '", "' resto '", "' maisMais'", "' menosMenos'", 
                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'['", "']'", "'{'", "'}'", "'('", "')'" ]
+                     "<INVALID>", "<INVALID>", "'['", "']'", "'{'", "'}'", 
+                     "'('", "')'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "WS", "DEINT", "DESTRING", "DEFLOAT", "DEBOOL", "DECHAR", 
+                      "DEINT", "DESTRING", "DEFLOAT", "DEBOOL", "DECHAR", 
                       "NOT_EQUAL", "EQUAL", "EQUAL_EQUAL", "IF", "ELSE", 
                       "WHILE", "AND", "OR", "GREATER_EQUAL", "LESSER_EQUAL", 
                       "GREATER", "LESSER", "NOT", "RETURN", "PLUS", "MINUS", 
                       "MULT", "DIV", "REST", "PLUS_PLUS", "MINUS_MINUS", 
                       "ENDLINE", "INT", "STRING", "FLOAT", "BOOL", "ID", 
-                      "LBOX", "RBOX", "LKEY", "RKEY", "LPAREN", "RPAREN" ]
+                      "LBOX", "RBOX", "LKEY", "RKEY", "LPAREN", "RPAREN", 
+                      "WS" ]
 
     RULE_prog = 0
     RULE_main = 1
@@ -187,49 +188,49 @@ class ccedilhaParser ( Parser ):
     T__0=1
     T__1=2
     T__2=3
-    WS=4
-    DEINT=5
-    DESTRING=6
-    DEFLOAT=7
-    DEBOOL=8
-    DECHAR=9
-    NOT_EQUAL=10
-    EQUAL=11
-    EQUAL_EQUAL=12
-    IF=13
-    ELSE=14
-    WHILE=15
-    AND=16
-    OR=17
-    GREATER_EQUAL=18
-    LESSER_EQUAL=19
-    GREATER=20
-    LESSER=21
-    NOT=22
-    RETURN=23
-    PLUS=24
-    MINUS=25
-    MULT=26
-    DIV=27
-    REST=28
-    PLUS_PLUS=29
-    MINUS_MINUS=30
-    ENDLINE=31
-    INT=32
-    STRING=33
-    FLOAT=34
-    BOOL=35
-    ID=36
-    LBOX=37
-    RBOX=38
-    LKEY=39
-    RKEY=40
-    LPAREN=41
-    RPAREN=42
+    DEINT=4
+    DESTRING=5
+    DEFLOAT=6
+    DEBOOL=7
+    DECHAR=8
+    NOT_EQUAL=9
+    EQUAL=10
+    EQUAL_EQUAL=11
+    IF=12
+    ELSE=13
+    WHILE=14
+    AND=15
+    OR=16
+    GREATER_EQUAL=17
+    LESSER_EQUAL=18
+    GREATER=19
+    LESSER=20
+    NOT=21
+    RETURN=22
+    PLUS=23
+    MINUS=24
+    MULT=25
+    DIV=26
+    REST=27
+    PLUS_PLUS=28
+    MINUS_MINUS=29
+    ENDLINE=30
+    INT=31
+    STRING=32
+    FLOAT=33
+    BOOL=34
+    ID=35
+    LBOX=36
+    RBOX=37
+    LKEY=38
+    RKEY=39
+    LPAREN=40
+    RPAREN=41
+    WS=42
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.9.2")
+        self.checkVersion("4.8")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -237,7 +238,6 @@ class ccedilhaParser ( Parser ):
 
 
     class ProgContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -264,12 +264,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProg" ):
                 listener.exitProg(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProg" ):
-                return visitor.visitProg(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -303,7 +297,6 @@ class ccedilhaParser ( Parser ):
 
 
     class MainContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -329,12 +322,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMain" ):
                 listener.exitMain(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMain" ):
-                return visitor.visitMain(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -363,7 +350,6 @@ class ccedilhaParser ( Parser ):
 
 
     class AttContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -414,12 +400,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAtt" ):
                 listener.exitAtt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAtt" ):
-                return visitor.visitAtt(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -492,7 +472,6 @@ class ccedilhaParser ( Parser ):
 
 
     class CodeContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -556,12 +535,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCode" ):
                 listener.exitCode(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCode" ):
-                return visitor.visitCode(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -627,7 +600,6 @@ class ccedilhaParser ( Parser ):
 
 
     class DecContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -657,12 +629,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDec" ):
                 listener.exitDec(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDec" ):
-                return visitor.visitDec(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -722,7 +688,6 @@ class ccedilhaParser ( Parser ):
 
 
     class List_typeContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -751,12 +716,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitList_type" ):
                 listener.exitList_type(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitList_type" ):
-                return visitor.visitList_type(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -784,7 +743,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Basic_typeContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -816,12 +774,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitBasic_type" ):
                 listener.exitBasic_type(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBasic_type" ):
-                return visitor.visitBasic_type(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -849,7 +801,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Basic_logicContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -884,12 +835,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitBasic_logic" ):
                 listener.exitBasic_logic(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBasic_logic" ):
-                return visitor.visitBasic_logic(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -917,7 +862,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Func_decContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -962,12 +906,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_dec" ):
                 listener.exitFunc_dec(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunc_dec" ):
-                return visitor.visitFunc_dec(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1060,7 +998,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Func_callContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1092,12 +1029,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_call" ):
                 listener.exitFunc_call(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunc_call" ):
-                return visitor.visitFunc_call(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1161,7 +1092,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Func_endContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1207,12 +1137,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_end" ):
                 listener.exitFunc_end(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunc_end" ):
-                return visitor.visitFunc_end(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1283,7 +1207,6 @@ class ccedilhaParser ( Parser ):
 
 
     class FuncContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1320,12 +1243,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitFuncMinusMinus" ):
                 listener.exitFuncMinusMinus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncMinusMinus" ):
-                return visitor.visitFuncMinusMinus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class FuncPlusPlusContext(FuncContext):
 
@@ -1347,12 +1264,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFuncPlusPlus" ):
                 listener.exitFuncPlusPlus(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncPlusPlus" ):
-                return visitor.visitFuncPlusPlus(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class FuncPrintContext(FuncContext):
@@ -1381,12 +1292,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFuncPrint" ):
                 listener.exitFuncPrint(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncPrint" ):
-                return visitor.visitFuncPrint(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1452,7 +1357,6 @@ class ccedilhaParser ( Parser ):
 
 
     class ArgsContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1482,12 +1386,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArgs" ):
                 listener.exitArgs(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArgs" ):
-                return visitor.visitArgs(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1532,7 +1430,6 @@ class ccedilhaParser ( Parser ):
 
 
     class BooleanContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1590,12 +1487,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBoolean" ):
                 listener.exitBoolean(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBoolean" ):
-                return visitor.visitBoolean(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1675,7 +1566,6 @@ class ccedilhaParser ( Parser ):
 
 
     class Expr_boolContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1712,12 +1602,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitExpr_boolParen" ):
                 listener.exitExpr_boolParen(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr_boolParen" ):
-                return visitor.visitExpr_boolParen(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class BoolContext(Expr_boolContext):
 
@@ -1737,12 +1621,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBool" ):
                 listener.exitBool(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBool" ):
-                return visitor.visitBool(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class Expr_boolLogicContext(Expr_boolContext):
@@ -1776,12 +1654,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitExpr_boolLogic" ):
                 listener.exitExpr_boolLogic(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr_boolLogic" ):
-                return visitor.visitExpr_boolLogic(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class Expr_boolAndOrContext(Expr_boolContext):
 
@@ -1807,12 +1679,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpr_boolAndOr" ):
                 listener.exitExpr_boolAndOr(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr_boolAndOr" ):
-                return visitor.visitExpr_boolAndOr(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1941,7 +1807,6 @@ class ccedilhaParser ( Parser ):
 
 
     class ExprContext(ParserRuleContext):
-        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1983,12 +1848,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitExprMultDiv" ):
                 listener.exitExprMultDiv(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprMultDiv" ):
-                return visitor.visitExprMultDiv(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class ExprParenContext(ExprContext):
 
@@ -2011,12 +1870,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExprParen" ):
                 listener.exitExprParen(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprParen" ):
-                return visitor.visitExprParen(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class ExprPlusMinusContext(ExprContext):
@@ -2044,12 +1897,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitExprPlusMinus" ):
                 listener.exitExprPlusMinus(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprPlusMinus" ):
-                return visitor.visitExprPlusMinus(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class NumberContext(ExprContext):
 
@@ -2067,12 +1914,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNumber" ):
                 listener.exitNumber(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNumber" ):
-                return visitor.visitNumber(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class IdContext(ExprContext):
@@ -2092,12 +1933,6 @@ class ccedilhaParser ( Parser ):
             if hasattr( listener, "exitId" ):
                 listener.exitId(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitId" ):
-                return visitor.visitId(self)
-            else:
-                return visitor.visitChildren(self)
-
 
     class ExprFuncCallContext(ExprContext):
 
@@ -2116,12 +1951,6 @@ class ccedilhaParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExprFuncCall" ):
                 listener.exitExprFuncCall(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExprFuncCall" ):
-                return visitor.visitExprFuncCall(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
