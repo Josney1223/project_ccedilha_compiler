@@ -1,4 +1,4 @@
-from .att import Att
+from att_package.att import Att
 
 
 class AttDict:

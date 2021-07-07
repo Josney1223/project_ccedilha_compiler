@@ -1,4 +1,4 @@
-from venv.Lib.ccedilha.func_package.func import func
+from func_package.func import func
 
 
 class funcDict():

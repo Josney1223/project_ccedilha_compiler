@@ -1,8 +1,11 @@
 # Generated from ccedilha.g4 by ANTLR 4.9.2
-from .att_package import att_dict
+if __name__ is not None and "." in __name__:
+    from att_package import att_dict
+else:
+    from att_package import att_dict
 from antlr4 import *
-from .ccedilhaParser import ccedilhaParser
-from .func_package.func_dict import funcDict
+from ccedilhaParser import ccedilhaParser
+from func_package.func_dict import funcDict
 
 # This class defines a complete generic visitor for a parse tree produced by ccedilhaParser.
 
