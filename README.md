@@ -17,6 +17,7 @@ Caso o compilador não funcione, utilize o seguinte método:
 
 Link para a documentação do projeto.
 
-[CcedilhaDoc.pdf](https://github.com/Josney1223/project_ccedilha_compiler/files/6776993/CcedilhaDoc.pdf)
+[CcedilhaDoc.pdf](https://github.com/Josney1223/project_ccedilha_compiler/files/6777011/CcedilhaDoc.pdf)
+
 
 
