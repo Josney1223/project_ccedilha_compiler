@@ -12,13 +12,10 @@ def main(argv):
     stream = CommonTokenStream(lexer)
     parser = ccedilhaParser(stream)
     tree = parser.prog()
-    print(tree.toStringTree(recog=parser))
+    #print(tree.toStringTree(recog=parser))
 
     c = ccedilhaVisitorLogic()
     c.visitProg(tree)
-    # listener = ccedilhaListener()
-    # walker = ParseTreeWalker()
-    # walker.walk(listener, tree)
 
 
 if __name__ == '__main__':

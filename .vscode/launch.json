@@ -7,7 +7,7 @@
             "grammar": "${file}",
             "name": "Debug Current Grammar",
             "startRule": "prog",
-            "input": "venv\\Lib\\ccedilha\\test.ç",
+            "input": "venv\\Lib\\ccedilha\\input.ç",
             "visualParseTree": true
         },
         {

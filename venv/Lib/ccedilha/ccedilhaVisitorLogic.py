@@ -22,7 +22,7 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
     def visitProg(self, ctx:ccedilhaParser.ProgContext):
         for i in ctx.func_dec():
             self.visit(i)
-        self.visit(ctx.main())
+        self.visit(ctx.main())        
 
     # Visit a parse tree produced by ccedilhaParser#func_dec.
     def visitFunc_dec(self, ctx:ccedilhaParser.Func_decContext):          
@@ -188,8 +188,8 @@ class ccedilhaVisitorLogic(ParseTreeVisitor):
         if self.func_return is None:     
             if ctx.ID():
                 print(self.local_Ids[self.actual_context].getValue(ctx.ID().getText(), "wildcard"))
-            elif ctx.INT():
-                print(ctx.INT().getText())
+            elif ctx.expr():
+                print(self.visit(ctx.expr()))
             elif ctx.STRING():
                 print(ctx.STRING().getText())        
             return self.visitChildren(ctx)

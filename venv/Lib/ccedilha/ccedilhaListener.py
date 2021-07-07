@@ -1,4 +1,4 @@
-# Generated from d:\Projetos\project_ccedilha_compiler\venv\Lib\ccedilha\ccedilha.g4 by ANTLR 4.8
+# Generated from ccedilha.g4 by ANTLR 4.9.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .ccedilhaParser import ccedilhaParser

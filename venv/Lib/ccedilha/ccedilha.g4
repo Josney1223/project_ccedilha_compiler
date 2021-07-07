@@ -37,7 +37,7 @@ func_call: ID LPAREN (args? | (args ',')+ (args) )RPAREN
 func_end: RETURN LPAREN? (expr | STRING | expr_bool | ID | func_call) RPAREN? ENDLINE
     ;
     
-func: 'amostrar' LPAREN (STRING | INT | ID) RPAREN ENDLINE #funcPrint
+func: 'amostrar' LPAREN (STRING | expr | ID) RPAREN ENDLINE #funcPrint
     | ID PLUS_PLUS ENDLINE #funcPlusPlus
     | ID MINUS_MINUS ENDLINE #funcMinusMinus  
     ;
